@@ -1,0 +1,12 @@
+@import "../../../sass/common.module.scss";
+
+.page {
+  display: grid;
+
+  width: 100rem;
+  min-height: 100rem;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  margin: auto;
+  
+}
