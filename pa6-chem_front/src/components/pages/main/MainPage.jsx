@@ -5,7 +5,8 @@ import page_styles from '../pages_styles/pages_styles.module.scss'
 
 export default function MainPage() {
   return (
-    <div className={page_styles.page}>
+    <>
+    <div className={page_styles.starter_page}>
 
       <div className={background_image_styles.image_container}>
 
@@ -13,5 +14,6 @@ export default function MainPage() {
 
       </div>
     </div>
+    </>
   )
 }

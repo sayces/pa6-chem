@@ -2,11 +2,27 @@
 
 .page {
   display: grid;
-
+  position: relative;
   width: 100rem;
-  min-height: 100rem;
+  
   grid-template-rows: repeat(5, 1fr);
   grid-template-columns: repeat(5, 1fr);
   margin: auto;
+  gap: 1rem;
+  
+  top: 9rem;
+}
+
+.starter_page {
+  display: grid;
+  position: relative;
+  width: 100rem;
+  
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  margin: auto;
+  gap: 1rem;
+  
+  top: 10rem;
   
 }
