@@ -20,12 +20,11 @@
     grid-template-rows: 1;
     align-items: center;
     width: 80%;
-    background: #aaa;
+    background: #353535;
     border-radius: 0 0 20px 20px;
     transition: all 0.4s;
 
     .logotype {
-      
       position: sticky;
       text-align: center;
       display: flex;
@@ -33,7 +32,7 @@
       justify-content: center;
       margin: 1rem;
 
-      color: rgb(229, 255, 112);
+      color: $meta_color;
       backdrop-filter: drop-shadow(0 0 2px rgb(0, 0, 0));
       // mix-blend-mode: normal;
       
@@ -89,14 +88,17 @@
   0% {
     content: ' \\ ';  
   }
-  33% {
+  25% {
     content: ' | ';
   }
-  66% {
+  50% {
     content: ' / ';
   }
-  100% {
+  75% {
     content: ' | ';
+  }
+  100% {
+    content: ' \\ ';  
   }
 }
 
@@ -104,13 +106,16 @@
   0% {
     content: ' / ';  
   }
-  33% {
+  25% {
     content: ' | ';
   }
-  66% {
+  50% {
     content: ' \\ ';
   }
-  100% {
+  75% {
     content: ' | ';
+  }
+  100% {
+    content: ' / ';  
   }
 }

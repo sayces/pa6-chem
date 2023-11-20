@@ -1,5 +1,5 @@
 import React from 'react';
-import StarterPage from './components/pages/StarterPage';
+import StarterPage from './components/pages/StarterPage/StarterPage';
 import styles from './sass/common.module.scss'
 
 function App() {
