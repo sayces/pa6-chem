@@ -8,7 +8,7 @@
   margin: auto;
   padding: auto;
   
-  background: #292929;
+  background: rgb(32 36 34);
   justify-content: center;
 
   .starter_page {
@@ -61,6 +61,8 @@
     color: #cfcfcf;
     text-align: start;
     text-indent: 2rem;
+    max-width: 30rem;
+    text-align: justify;
     
     span {
       font-size: 2.7rem;
@@ -68,6 +70,8 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: 700;
+      
+      text-align: justify;
     }
   }
 }

@@ -8,6 +8,9 @@ export default function HeaderContainer() {
     <div className={header_styles.header_container}>
       <div className={header_styles.header_box}>
         <Logo className={header_styles.logotype}/>
+        <div>
+          <p>официальный сайт <span>youko nails</span></p>
+        </div>
         <div className={header_styles.button}>
           <p className={header_styles.signup_button}>Home</p>
         </div> 

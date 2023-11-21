@@ -6,21 +6,23 @@
   justify-content: center;
   
 
-  // backdrop-filter: blur(7px);
   width: 100%;
   height: 9rem;
   z-index: 2;
 
   .header_box {
-    display: grid;
-    justify-content: center;
+    display: flex;
+    justify-content: space-around;
     justify-items: center;
-    grid-template-columns: 3fr 2fr 1fr 1fr ;
-    gap: 1rem;
+    
+    // padding: 0 1%;
+    // grid-template-columns: 3fr 2fr 1fr 1fr ;
+    gap: 4rem;
     grid-template-rows: 1;
     align-items: center;
     width: 80%;
-    background: #353535;
+    background: #191b19;
+    backdrop-filter: blur(7px);
     border-radius: 0 0 20px 20px;
     transition: all 0.4s;
 
@@ -31,9 +33,11 @@
       align-items: center;
       justify-content: center;
       margin: 1rem;
-
+      
       color: $meta_color;
-      backdrop-filter: drop-shadow(0 0 2px rgb(0, 0, 0));
+      animation: 1s ease logoFlicker 2;
+      
+
       // mix-blend-mode: normal;
       
       
@@ -117,5 +121,26 @@
   }
   100% {
     content: ' / ';  
+  }
+}
+
+@keyframes logoFlicker {
+  0% {
+    filter: drop-shadow(0 0 4px $meta_color);
+  }
+  80% {
+    filter: drop-shadow(0 0 4px $meta_color);
+  }
+  81% {
+    filter: drop-shadow(0 0 4px #000);
+  }
+  85% {
+    filter: drop-shadow(0 0 4px $meta_color);
+  }
+  90% {
+    filter: drop-shadow(0 0 4px #000);
+  }
+  95% {
+    filter: drop-shadow(0 0 4px $meta_color);
   }
 }
