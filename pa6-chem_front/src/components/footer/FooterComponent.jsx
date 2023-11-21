@@ -1,6 +1,6 @@
 import React from 'react';
-import header_styles from './_header.module.scss';
-import Logo from './header-items/Logo';
+import footer_styles from './_header.module.scss';
+
 
 
 export default function HeaderContainer() {
@@ -11,8 +11,8 @@ export default function HeaderContainer() {
         <div>
           <p className={header_styles.description}>официальный сайт <span>youko nails</span></p>
         </div>
-        <div className={header_styles.signup_button}>
-          <p className={header_styles._button_text}>Home</p>
+        <div className={header_styles.button}>
+          <p className={header_styles.signup_button}>Home</p>
         </div> 
       </div>
     </div>

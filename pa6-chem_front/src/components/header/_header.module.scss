@@ -7,23 +7,18 @@
   
 
   width: 100%;
-  height: 9rem;
+  height: 7rem;
   z-index: 2;
 
   .header_box {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     justify-items: center;
-    
-    // padding: 0 1%;
-    // grid-template-columns: 3fr 2fr 1fr 1fr ;
-    gap: 4rem;
-    grid-template-rows: 1;
+    gap: 2rem;
     align-items: center;
     width: 80%;
     background: #191b19;
-    backdrop-filter: blur(7px);
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 2rem 2rem;
     transition: all 0.4s;
 
     .logotype {
@@ -33,60 +28,58 @@
       align-items: center;
       justify-content: center;
       margin: 1rem;
-      
       color: $meta_color;
-      animation: 1s ease logoFlicker 2;
-      
-
-      // mix-blend-mode: normal;
-      
-      
-
-      font-size: 4rem;
-      line-height: 3.7rem;
-      
-      height: auto;
+      filter: drop-shadow(0 0 2px $meta_color);
+      font-size: 3rem;
+      line-height: 2.7rem;
+      height: 3rem;
     }
 
+    .description {
+      color: #FFF;
+      font-weight: 200;
+      font-size: auto;
+    }
 
-    .button {
-      color: rgb(0, 0, 0)000;
-      grid-column: 4;
+    .signup_button {
       text-align: center;
-
-      .signup_button {
+      background: #e5ff70;
+      border-radius: 2rem;
+      
+      transition: all 0.2s;
+      height: 2rem;
+      padding: 1rem;
+      margin: 1rem;
+      min-width: 8rem;
+      ._button_text {
+        color: rgb(0, 0, 0)000;
+        
         line-height: 2rem;
-        border-radius: 20px;
-        transition: all 0.2s;
-        max-width: 10rem;
-        height: 2rem;
-        padding: 1rem;
-        margin: 1rem;
-        background: #e5ff70;
         &::after {
           content: ' | ';
-        }
-        &::before {
-          content: ' | ';
-        }
-        
-      }
-
-      &:hover {
-        cursor: pointer;
-        .signup_button {
-          &::after{
           animation: 1.6s linear clips_end infinite;
         }
         &::before {
+          content: ' | ';
           animation: 1.6s linear clips_start infinite;
         }
-        }
+      }
+      
+      
+    }
+
+    &:hover {
+      cursor: pointer;
+      .signup_button {
+        &::after{
         
+      }
+        &::before {
+          
       }
     }
   }
-}
+}}
 
 @keyframes clips_start {
   0% {
@@ -124,23 +117,12 @@
   }
 }
 
-@keyframes logoFlicker {
-  0% {
-    filter: drop-shadow(0 0 4px $meta_color);
+@media screen and (max-width: 900px) {
+  .description {
+    display: none;
   }
-  80% {
-    filter: drop-shadow(0 0 4px $meta_color);
-  }
-  81% {
-    filter: drop-shadow(0 0 4px #000);
-  }
-  85% {
-    filter: drop-shadow(0 0 4px $meta_color);
-  }
-  90% {
-    filter: drop-shadow(0 0 4px #000);
-  }
-  95% {
-    filter: drop-shadow(0 0 4px $meta_color);
+
+  .signup_button {
+    width: 1rem;
   }
 }

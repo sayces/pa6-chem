@@ -1,0 +1,78 @@
+@import "/src/sass/common.module.scss";
+
+.auth_form {
+  display: flex;
+  justify-content: center;
+  background: $meta_color_dark;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  
+  .auth_label {
+    font-size: 2rem;
+    font-weight: 700;
+    text-indent: 0;
+    margin: 2rem;
+  }
+
+  .login_container {
+    background: rgb(80 90 36);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 40%;
+    border-radius: 2rem 2rem 0 0;
+    padding: 2rem 2rem 1rem 2rem;
+    margin: 0 1rem;
+    
+    .login_input {
+      text-align: center;
+      font-size: 2rem ;
+      padding: 0.4rem 1rem;
+      border-radius: 2rem;
+    }
+  }
+  .password_container {
+    background: rgb(144 161 69);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 40%;
+    border-radius: 0 0 2rem 2rem;
+    padding: 1rem 2rem 2rem 2rem;
+    margin: 0 1rem ;
+    
+    .password_input {
+      text-align: center;
+      font-size: 2rem;
+      padding: 0.4rem 1rem;
+      border-radius: 2rem;
+    }
+  }
+}
+
+.grid_container {
+  grid-template-columns: 1;
+  grid-template-rows: 1;
+  position: relative;
+  background: #202422;
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  
+  .grid_element {
+    grid-column: 1;
+    position: relative;
+    background: #333;
+    width: auto;
+    height: auto;
+    padding: 0;
+    backdrop-filter: blur(2px);
+  }
+}
