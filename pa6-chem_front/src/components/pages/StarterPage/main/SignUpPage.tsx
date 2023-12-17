@@ -2,6 +2,7 @@
 import React from 'react';
 import page_styles from '../../pages_styles/pages_styles.module.scss'
 import auth_styles from '../../pages_styles/auth_styles.module.scss'
+import MediumButton from '../../../button/MediumButton.tsx';
 
 export default function MainPage() {
   return (
@@ -19,11 +20,8 @@ export default function MainPage() {
               <input className={auth_styles.password_input} placeholder='введите ваш пароль' type='password'/>
             </div>
 
-            <button className={auth_styles.auth_button}>
-              <p className={auth_styles._button_text}>регистрация</p>
-            </button>
+            <MediumButton />
 
-            
           </div>
         </div>
       </div>

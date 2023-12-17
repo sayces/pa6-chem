@@ -1,10 +1,11 @@
+import express from 'express';
+import { Users } from './models.js';
 
-import http from 'http';
+const app = express();
 
-const listener = (req, res) => {
-	res.end('hello sasha...')
-}
+app.get('/users', async (req, res) => {
+  res.send(await Users.findAll())
+});
 
-const server = http.createServer(listener);
 
-server.listen(3005);
+app.listen(3005);
