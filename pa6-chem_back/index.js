@@ -3,8 +3,8 @@ import { Users } from './models.js';
 
 const app = express();
 
-app.get('/users', async (req, res) => {
-  res.send(await Users.findAll())
+app.get('/', (req, res) => {
+  res.send('hello sasha')
 });
 
 
