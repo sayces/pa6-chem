@@ -6,7 +6,7 @@ export default function SmallButton() {
       <>
         <button className={styles._medium_button}>
           <p className={styles._button_snippet}>
-            sign up
+            регистрация
           </p>
         </button> 
       </>

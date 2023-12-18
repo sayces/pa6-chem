@@ -6,7 +6,7 @@ let conn;
 (async function() {
   if (!conn) {
     try {
-      conn = new Sequelize('pa6-chem_db', 'root', 'fifteen49', {
+      conn = new Sequelize('pa6-chem_db', 'root', '9410', {
         dialect: 'mysql',
         storage: './db.mysql',
       })

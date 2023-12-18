@@ -10,7 +10,6 @@
   margin: auto;
   padding: auto;
   
-  background: rgb(32 36 34);
   justify-content: center;
 
   .starter_page {
@@ -19,63 +18,46 @@
     display: flex;
     justify-content: center;
     width: 80%;
-    background: $meta_color_dark;
     height: 100%;
     border-radius: 2rem;
+    
+  }
+}
 
-    .main_page {
+.main_page {
+  position: relative;
+  background: rgb(32 36 34);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 90%;
+  
+  position: relative;
+
+  .grid_container {
+    position: relative;
+    background: #202422;
+    display: grid;
+    gap: 1rem;
+    align-items: center;
+    grid-template-rows: 100rem;
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    height: 100%;
+    margin: auto;
+
+    .grid_element {
       position: relative;
       background: rgb(32 36 34);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      width: auto;
       height: 100%;
-      width: 90%;
-      
-      position: relative;
-
-      .grid_container {
-        position: relative;
-        background: #202422;
-        display: grid;
-        gap: 1rem;
-        align-items: center;
-        grid-template-rows: 100rem;
-        grid-template-columns: repeat(3, 1fr);
-        width: 90%;
-        height: 100%;
-        margin: auto;
-
-        .grid_element {
-          position: relative;
-          background: rgb(32 36 34);
-          width: auto;
-          height: 100%;
-          padding: 0;
-          backdrop-filter: blur(2px);
-        }
-      }
-    }
-  }
-
-  p {
-    font-size: 2.7rem;
-    color: #cfcfcf;
-    text-align: start;
-    // text-indent: 2rem;
-    max-width: 30rem;
-    text-align: justify;
-    
-    span {
-      font-size: 2.7rem;
-      background-image: linear-gradient(180deg, rgb(184, 117, 72), #8b2d2d );
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: 700;
-      text-align: justify;
+      padding: 0;
+      backdrop-filter: blur(2px);
     }
   }
 }
+
 
 @media (max-width: 900px) {
   .grid_container {

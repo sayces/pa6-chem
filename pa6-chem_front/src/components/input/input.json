@@ -1,0 +1,10 @@
+[
+  {
+    "name": "login",
+    "placeholder": "введите ваш логин"
+  },
+  {
+    "name": "password",
+    "placeholder": "введите ваш пароль"
+  }
+]

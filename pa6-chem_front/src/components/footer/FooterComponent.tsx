@@ -1,10 +1,8 @@
 import React from 'react';
 import footer_styles from './_footer.module.scss';
-import Link from './links/Link.tsx';
-import links from './links/links.json';
+import MediaLink from '../links/MediaLink.tsx';
+import links from '../links/links.json';
 
-
-console.log(links)
 
 export default function HeaderContainer() {
   return (
@@ -18,7 +16,7 @@ export default function HeaderContainer() {
           {
             
             links.map(link => 
-              <Link link={link} key={link.name}/>
+              <MediaLink link={link} key={link.name}/>
             )
             
           }

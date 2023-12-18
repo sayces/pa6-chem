@@ -7,6 +7,7 @@
   flex-direction: column;
   align-items: center;
   padding: 2rem;
+  width: 28rem;
   
   .auth_label {
     font-size: 2rem;
@@ -21,18 +22,12 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    width: 40%;
+    width: 90%;
     border-radius: 2rem 2rem 0 0;
     padding: 2rem 2rem 1rem 2rem;
     margin: 0 1rem;
     
-    .login_input {
-      text-align: center;
-      font-size: 2rem ;
-      padding: 0.4rem 1rem;
-      border-radius: 2rem;
-      caret-shape: auto;
-    }
+    
   }
   .password_container {
     background: rgb(144 161 69);
@@ -40,18 +35,12 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    width: 40%;
+    width: 90%;
     border-radius: 0 0 2rem 2rem;
     padding: 1rem 2rem 2rem 2rem;
     margin: 0 1rem ;
     
-    .password_input {
-      text-align: center;
-      font-size: 2rem;
-      padding: 0.4rem 1rem;
-      border-radius: 2rem;
-      caret-shape: auto;
-    }
+    
   }
 }
 

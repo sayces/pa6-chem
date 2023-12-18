@@ -2,14 +2,14 @@
 import React from 'react'
 import HeaderComponent from '../../header/HeaderComponent.tsx'
 import FooterComponent from '../../footer/FooterComponent.tsx'
-// import MainPage from './main/MainPage'
-import SignUpPage from './main/SignUpPage.tsx'
+
+import PageMarkup from './main/PageMarkup.tsx'
 
 export default function StarterPage() {
   return (
     <>
       <HeaderComponent />
-      <SignUpPage />
+      <PageMarkup />
       <FooterComponent />
     </>
   )
