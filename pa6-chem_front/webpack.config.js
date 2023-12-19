@@ -1,23 +1,34 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = {
-  context: path.resolve(__dirname, 'learn'),
+  context: path.resolve(__dirname, 'src'),
   mode: 'development',
   entry: {
-    main: './index.js',
-    analytics: './analytics.js',
+    main: './index.tsx',
   },
   output: {
     filename: '[name].[contenthash].js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'),
+    clean: true
   },
   plugins: [
     new HTMLWebpackPlugin({
-      title: 'youko chemistry',
-      template: './index.html',
+      title: `youko's chemistry`,
+      template: path.resolve(__dirname, 'public', 'index.html'),
     }),
-    new CleanWebpackPlugin()
-  ]
+  
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+    ],
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+  },
 } 
