@@ -1,5 +1,5 @@
-const dotenv = require('dotenv');
-const mysql2 = require('mysql2');
+import dotenv from 'dotenv';
+import mysql2 from 'mysql2';
 dotenv.config();
 
 const conn = mysql2.createConnection({
@@ -16,3 +16,4 @@ conn.connect((err) => {
   }
   console.log(conn.state);
 })
+

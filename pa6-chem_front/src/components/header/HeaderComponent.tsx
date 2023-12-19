@@ -9,7 +9,7 @@ export default function HeaderContainer() {
   return (
     <header className={header_styles.header_container}>
       <div className={header_styles.header_box}>
-        <Logo className={header_styles.logotype}/>
+        <Logo/>
         <SmallButton />
        
       </div>
