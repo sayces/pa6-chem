@@ -1,6 +1,6 @@
 import React from 'react';
-import footer_styles from './_footer.module.scss';
-import MediaLink from '../links/MediaLink.tsx';
+import footer_styles from './_footer.scss';
+import MediaLink from '../links/MediaLink';
 import links from '../links/links.json';
 
 

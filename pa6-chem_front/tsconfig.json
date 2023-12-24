@@ -4,18 +4,22 @@
     "noImplicitAny": true,
     "module": "ESNext",
     "target": "es6",
-    "jsx": "react-jsx",
+    "jsx": "react",
     "allowJs": true,
     "moduleResolution": "node",
-    "allowImportingTsExtensions":true,
-    "noEmit" :true,
+    // "allowImportingTsExtensions": true,
+    // "emitDeclarationOnly": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "sourceMap": true
   },
-  "include": ["src"],
+  "plugins": [
+    {
+      "name": "typescript-plugin-css-modules"
+    }
+  ],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"

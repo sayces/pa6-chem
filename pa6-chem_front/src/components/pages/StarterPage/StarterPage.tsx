@@ -1,11 +1,11 @@
 
 import React from 'react'
-import HeaderComponent from '../../header/HeaderComponent.tsx'
-import FooterComponent from '../../footer/FooterComponent.tsx'
+import HeaderComponent from '../../header/HeaderComponent'
+import FooterComponent from '../../footer/FooterComponent'
 
-import PageMarkup from './main/PageMarkup.tsx'
+import PageMarkup from './main/PageMarkup'
 
-export default function StarterPage() {
+export function StarterPage() {
   return (
     <>
       <HeaderComponent />

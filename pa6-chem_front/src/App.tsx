@@ -1,13 +1,15 @@
-import * as React from 'react';
-import StarterPage from './components/pages/StarterPage/StarterPage.tsx';
-import styles from './sass/common.module.scss';
+import React from 'react';
+import {StarterPage} from './components/pages/StarterPage/StarterPage';
+import styles from './sass/common.scss';
 
-export default function App() {
+export function App() {
+  
   return (
     
-    <div className={styles.App}>
+    <div className={styles.app}>
       <StarterPage />
     </div>
+    
   )
 }
 

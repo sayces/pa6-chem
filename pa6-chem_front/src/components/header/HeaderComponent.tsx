@@ -1,7 +1,7 @@
 import React from 'react';
-import header_styles from './_header.module.scss';
-import Logo from './header-items/Logo.tsx';
-import SmallButton from '../button/SmallButton.tsx';
+import header_styles from './_header.scss';
+import Logo from './header-items/Logo';
+import SmallButton from '../button/SmallButton';
 
 
 

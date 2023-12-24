@@ -1,6 +1,6 @@
 import React from "react";
-import page_styles from "../../pages_styles/pages_styles.module.scss";
-import SignUpPage from "./SignUpPage.tsx";
+import page_styles from "../../pages_styles/pages_styles.scss";
+import SignUpPage from "./SignUpPage";
 
 export default function PageMarkup() {
   return (
