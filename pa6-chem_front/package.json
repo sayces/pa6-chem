@@ -54,6 +54,7 @@
     "@types/webpack-dev-server": "^4.7.2",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.8.1",
+    "css-modules-typescript-loader": "^4.0.1",
     "html-webpack-plugin": "^5.5.4",
     "json-loader": "^0.5.7",
     "mini-css-extract-plugin": "^2.7.6",
