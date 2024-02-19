@@ -1,5 +1,5 @@
 import React from 'react';
-import header_styles from './_header.scss';
+import header_styles from './_header.module.scss';
 import Logo from './header-items/Logo';
 import SmallButton from '../button/SmallButton';
 

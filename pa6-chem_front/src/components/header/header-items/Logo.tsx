@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../_header.scss'
+import styles from '../_header.module.scss'
 
 export default function Logo() {
   return (

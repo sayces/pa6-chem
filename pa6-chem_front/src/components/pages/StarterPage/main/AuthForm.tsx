@@ -1,6 +1,6 @@
 import React from 'react'
 import InputComponent from '../../../input/InputComponent';
-import auth_styles from './auth_styles.scss';
+import auth_styles from './auth_styles.module.scss';
 import MediumButton from '../../../button/MediumButton';
 import inputs from '../../../input/input.json'
 import LinkComponent from '../../../links/LinkComponent';

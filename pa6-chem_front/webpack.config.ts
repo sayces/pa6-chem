@@ -36,7 +36,7 @@ export default (env: any) => {
         {
           test: /\.scss$/i,
           use: [
-            "style-loader", "css-modules-typescript-loader", "css-loader"
+            "style-loader", "css-loader", "sass-loader"
           ],
           exclude: /node_modules/,
         },

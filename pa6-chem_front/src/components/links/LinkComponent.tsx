@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './_links.scss';
+import styles from './_links.module.scss';
 
 export default function LinkComponent(link: any) {
   return (

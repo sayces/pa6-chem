@@ -1,5 +1,5 @@
 import * as React from 'react'
-import link_styles from './_links.scss'
+import link_styles from './_links.module.scss'
 
 
 export default function MediaLink(link: any) {

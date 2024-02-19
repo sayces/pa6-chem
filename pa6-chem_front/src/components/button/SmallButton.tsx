@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './_button.scss';
+import styles from './_button.module.scss';
 
 export default function SmallButton() {
   return (
