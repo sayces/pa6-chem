@@ -1,0 +1,861 @@
+/*!****************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/header/_header.module.scss ***!
+  \****************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap);
+/*!****************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/button/_button.module.scss ***!
+  \****************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap);
+/*!****************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/footer/_footer.module.scss ***!
+  \****************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap);
+/*!**************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/links/_links.module.scss ***!
+  \**************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap);
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/pages/pages_styles/pages_styles.module.scss ***!
+  \*********************************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap);
+/*!************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/pages/StarterPage/main/auth_styles.module.scss ***!
+  \************************************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap);
+/*!**************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/sass/common.module.scss ***!
+  \**************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap);
+/*!********************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/header/_header.module.scss (1) ***!
+  \********************************************************************************************************************************************************************/
+input {
+  min-width: 10rem;
+  font-size: 1.7rem;
+  border: none;
+  width: auto;
+}
+
+.inputContainer--ATTmLXB_ {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 90%;
+}
+
+.inputField--_k9VFdIj {
+  text-align: start;
+  font-size: 1.7rem;
+  padding: 0.2rem 1rem;
+  border-radius: 2rem;
+  height: 2rem;
+  transition: all 0.3s;
+  width: auto;
+  margin: 1rem;
+}
+
+._inputFieldAttr--sgOjb6cD {
+  width: 3rem;
+}
+
+@keyframes attributeAnimation--aWj2sEIO {}
+* {
+  margin: 0;
+  padding: 0;
+}
+*:focus, * :active {
+  outline: none;
+}
+
+body,
+html {
+  font-family: "Rubik", serif;
+  font-weight: 500;
+  font-size: 10px;
+  height: 100%;
+  background: #202422;
+}
+
+.app--WUvkeliF {
+  height: auto;
+}
+
+#root--_dABeQpw {
+  height: auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+span {
+  font-size: 1.4rem;
+  color: rgb(229, 255, 112);
+}
+
+.header_container--XS0chiU5 {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 7rem;
+  z-index: 2;
+}
+.header_container--XS0chiU5 .header_box--aak9u0AH {
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  gap: 2rem;
+  align-items: center;
+  width: 80%;
+  background: #191b19;
+  border-radius: 0 0 1rem 1rem;
+  transition: all 0.4s;
+}
+.header_container--XS0chiU5 .header_box--aak9u0AH .logotype--Qcyb8Utd {
+  position: sticky;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  color: rgb(229, 255, 112);
+  line-height: 2.5rem;
+  height: 3rem;
+  font-weight: 300;
+}
+.header_container--XS0chiU5 .header_box--aak9u0AH .description--ajWJENqU {
+  color: #FFF;
+  font-weight: 200;
+  font-size: auto;
+}
+
+@media screen and (max-width: 900px) {
+  .description--ajWJENqU {
+    display: none;
+  }
+  .signup_button--pYrQrHOI {
+    width: 1rem;
+  }
+}
+/*!********************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/button/_button.module.scss (1) ***!
+  \********************************************************************************************************************************************************************/
+input {
+  min-width: 10rem;
+  font-size: 1.7rem;
+  border: none;
+  width: auto;
+}
+
+.inputContainer--YWACxNd9 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 90%;
+}
+
+.inputField--iTotDJ1x {
+  text-align: start;
+  font-size: 1.7rem;
+  padding: 0.2rem 1rem;
+  border-radius: 2rem;
+  height: 2rem;
+  transition: all 0.3s;
+  width: auto;
+  margin: 1rem;
+}
+
+._inputFieldAttr--V2Qxc243 {
+  width: 3rem;
+}
+
+@keyframes attributeAnimation--hTmsEUsx {}
+* {
+  margin: 0;
+  padding: 0;
+}
+*:focus, * :active {
+  outline: none;
+}
+
+body,
+html {
+  font-family: "Rubik", serif;
+  font-weight: 500;
+  font-size: 10px;
+  height: 100%;
+  background: #202422;
+}
+
+.app--eny0hiMw {
+  height: auto;
+}
+
+#root--d0bgqQYI {
+  height: auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+span {
+  font-size: 1.4rem;
+  color: rgb(229, 255, 112);
+}
+
+button {
+  font-weight: bolder;
+  border-radius: 2rem;
+  border: none;
+  background-color: rgb(229, 255, 112);
+  width: 2.4rem;
+  height: 2.4rem;
+  margin: 1rem;
+  transition: all 0.2s;
+}
+button ._button_snippet--hY1jbZiU {
+  color: #202422;
+  text-align: center;
+}
+button:hover {
+  background-color: rgb(144, 161, 69);
+  cursor: pointer;
+}
+button:hover ._button_snippet--hY1jbZiU {
+  color: #202422;
+  text-align: center;
+}
+button:active {
+  background-color: rgb(80, 90, 36);
+  cursor: progress;
+}
+button:active ._button_snippet--hY1jbZiU {
+  color: #d1d1d1;
+  text-align: center;
+}
+
+.small_button--Uh6RwiC_ {
+  width: 2.4rem;
+  background: rgb(229, 255, 112);
+}
+
+.attr_button_disabled--m0t5m1Ks {
+  display: none;
+}
+
+.attr_button--cJvAX3Ug {
+  margin: 1rem 0rem;
+  width: 2.4rem;
+}
+/*!********************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/footer/_footer.module.scss (1) ***!
+  \********************************************************************************************************************************************************************/
+input {
+  min-width: 10rem;
+  font-size: 1.7rem;
+  border: none;
+  width: auto;
+}
+
+.inputContainer--AHKq55hx {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 90%;
+}
+
+.inputField--KuemnqNc {
+  text-align: start;
+  font-size: 1.7rem;
+  padding: 0.2rem 1rem;
+  border-radius: 2rem;
+  height: 2rem;
+  transition: all 0.3s;
+  width: auto;
+  margin: 1rem;
+}
+
+._inputFieldAttr--__JP7nun {
+  width: 3rem;
+}
+
+@keyframes attributeAnimation--qRc0UBzG {}
+* {
+  margin: 0;
+  padding: 0;
+}
+*:focus, * :active {
+  outline: none;
+}
+
+body,
+html {
+  font-family: "Rubik", serif;
+  font-weight: 500;
+  font-size: 10px;
+  height: 100%;
+  background: #202422;
+}
+
+.app--ehShh_2L {
+  height: auto;
+}
+
+#root--UgmJOo_P {
+  height: auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+span {
+  font-size: 1.4rem;
+  color: rgb(229, 255, 112);
+}
+
+.footer_container--jG4IcKeZ {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
+  height: 7rem;
+  z-index: 2;
+}
+.footer_container--jG4IcKeZ .footer_box--JQhq3F0j {
+  display: flex;
+  justify-content: space-evenly;
+  justify-items: center;
+  gap: 2rem;
+  align-items: center;
+  width: 80%;
+  background: #191b19;
+  border-radius: 1rem 1rem 0 0;
+  transition: all 0.4s;
+}
+.footer_container--jG4IcKeZ .footer_box--JQhq3F0j .main_description--Kbc7_jPM {
+  color: #FFF;
+  font-weight: 200;
+  font-size: 1.4rem;
+}
+
+.links--NdLLfRMj {
+  display: flex;
+  width: auto;
+  gap: 0rem;
+}
+/*!******************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/links/_links.module.scss (1) ***!
+  \******************************************************************************************************************************************************************/
+input {
+  min-width: 10rem;
+  font-size: 1.7rem;
+  border: none;
+  width: auto;
+}
+
+.inputContainer--qsksgVT5 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 90%;
+}
+
+.inputField--ufs2jkeY {
+  text-align: start;
+  font-size: 1.7rem;
+  padding: 0.2rem 1rem;
+  border-radius: 2rem;
+  height: 2rem;
+  transition: all 0.3s;
+  width: auto;
+  margin: 1rem;
+}
+
+._inputFieldAttr--Uo3lBK7e {
+  width: 3rem;
+}
+
+@keyframes attributeAnimation--FUzSnjxX {}
+* {
+  margin: 0;
+  padding: 0;
+}
+*:focus, * :active {
+  outline: none;
+}
+
+body,
+html {
+  font-family: "Rubik", serif;
+  font-weight: 500;
+  font-size: 10px;
+  height: 100%;
+  background: #202422;
+}
+
+.app--ZEycCKYw {
+  height: auto;
+}
+
+#root--R6YPFXKW {
+  height: auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+span {
+  font-size: 1.4rem;
+  color: rgb(229, 255, 112);
+}
+
+a {
+  font-size: 1.7rem;
+  color: rgb(119, 57, 57);
+  transition: all 0.2s;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(151, 42, 42);
+  text-decoration: underline;
+}
+
+.medialink--MKDwKrV2 {
+  filter: drop-shadow(0 0 3px rgb(229, 255, 112));
+  transform: scale(70%);
+  justify-content: center;
+  width: 4rem;
+}
+
+.link--Mlt1lycH {
+  width: auto;
+  margin: 1rem;
+}
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/pages/pages_styles/pages_styles.module.scss (1) ***!
+  \*************************************************************************************************************************************************************************************/
+input {
+  min-width: 10rem;
+  font-size: 1.7rem;
+  border: none;
+  width: auto;
+}
+
+.inputContainer--xWjDy9Gz {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 90%;
+}
+
+.inputField--rxK4rBiV {
+  text-align: start;
+  font-size: 1.7rem;
+  padding: 0.2rem 1rem;
+  border-radius: 2rem;
+  height: 2rem;
+  transition: all 0.3s;
+  width: auto;
+  margin: 1rem;
+}
+
+._inputFieldAttr--qnfj_ONY {
+  width: 3rem;
+}
+
+@keyframes attributeAnimation--jn9bbvX9 {}
+* {
+  margin: 0;
+  padding: 0;
+}
+*:focus, * :active {
+  outline: none;
+}
+
+body,
+html {
+  font-family: "Rubik", serif;
+  font-weight: 500;
+  font-size: 10px;
+  height: 100%;
+  background: #202422;
+}
+
+.app--R8RIpULO {
+  height: auto;
+}
+
+#root--qStH9a0T {
+  height: auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+span {
+  font-size: 1.4rem;
+  color: rgb(229, 255, 112);
+}
+
+.page--wHL3S7Q9 {
+  position: static;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  padding: auto;
+  justify-content: center;
+}
+.page--wHL3S7Q9 .starter_page--BylD1LyJ {
+  position: relative;
+  margin: 10rem 0;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+  border-radius: 2rem;
+}
+
+.main_page--yt_3qlDy {
+  position: relative;
+  background: rgb(32, 36, 34);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 90%;
+  position: relative;
+}
+.main_page--yt_3qlDy .grid_container--iPwr7qhM {
+  position: relative;
+  background: #202422;
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  grid-template-rows: 100rem;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  height: 100%;
+  margin: auto;
+}
+.main_page--yt_3qlDy .grid_container--iPwr7qhM .grid_element--k8ySCLKq {
+  position: relative;
+  background: rgb(32, 36, 34);
+  width: auto;
+  height: 100%;
+  padding: 0;
+  backdrop-filter: blur(2px);
+}
+
+@media (max-width: 900px) {
+  .grid_container--iPwr7qhM {
+    grid-template-columns: 100% !important;
+    grid-template-rows: repeat(3, 50rem) !important;
+    margin: 4rem 0;
+    width: 90% !important;
+  }
+}
+/*!**************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/input/_input.module.scss ***!
+  \**************************************************************************************************************************************************************/
+input {
+  min-width: 10rem;
+  font-size: 1.7rem;
+  border: none;
+  width: auto;
+}
+
+.inputContainer--_tWRy9rJ {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 90%;
+}
+
+.inputField--vvFkzQPc {
+  text-align: start;
+  font-size: 1.7rem;
+  padding: 0.2rem 1rem;
+  border-radius: 2rem;
+  height: 2rem;
+  transition: all 0.3s;
+  width: auto;
+  margin: 1rem;
+}
+
+._inputFieldAttr--U1rgf9bB {
+  width: 3rem;
+}
+
+@keyframes attributeAnimation--zvT4FQvN {}
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/pages/StarterPage/main/auth_styles.module.scss (1) ***!
+  \****************************************************************************************************************************************************************************************/
+input {
+  min-width: 10rem;
+  font-size: 1.7rem;
+  border: none;
+  width: auto;
+}
+
+.inputContainer--BdgJpRbb {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 90%;
+}
+
+.inputField--qJDTl3M_ {
+  text-align: start;
+  font-size: 1.7rem;
+  padding: 0.2rem 1rem;
+  border-radius: 2rem;
+  height: 2rem;
+  transition: all 0.3s;
+  width: auto;
+  margin: 1rem;
+}
+
+._inputFieldAttr--KcsTo2lI {
+  width: 3rem;
+}
+
+@keyframes attributeAnimation--tQhu4UNm {}
+* {
+  margin: 0;
+  padding: 0;
+}
+*:focus, * :active {
+  outline: none;
+}
+
+body,
+html {
+  font-family: "Rubik", serif;
+  font-weight: 500;
+  font-size: 10px;
+  height: 100%;
+  background: #202422;
+}
+
+.app--soQ_SGyS {
+  height: auto;
+}
+
+#root--qOHQmNIn {
+  height: auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+span {
+  font-size: 1.4rem;
+  color: rgb(229, 255, 112);
+}
+
+.auth_form--wAN0cUuV {
+  display: flex;
+  justify-content: center;
+  background: #191b19;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  width: 28rem;
+  min-height: 20rem;
+  backdrop-filter: blur(1rem);
+}
+.auth_form--wAN0cUuV .auth_label--tlvj1RzT {
+  font-size: 2rem;
+  font-weight: 700;
+  text-indent: 0;
+  margin: 2rem;
+}
+.auth_form--wAN0cUuV .loginContainer--_ST1lT83 {
+  background: rgb(80, 90, 36);
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  text-align: center;
+  border-radius: 2rem 2rem 0 0;
+  padding: 2rem 2rem 1rem 2rem;
+  margin: 0 1rem;
+  width: 26rem;
+}
+.auth_form--wAN0cUuV .loginContainerActive--kTu0yJAA {
+  background: rgb(80, 90, 36);
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  text-align: center;
+  border-radius: 2rem 2rem 0 0;
+  padding: 2rem 2rem 1rem 2rem;
+  margin: 0 1rem;
+  width: 26rem;
+  animation-name: loginContainerColor--mUBfCVjw;
+  animation-duration: 3s;
+}
+.auth_form--wAN0cUuV .passwordContainer--hd6C00If {
+  background: rgb(144, 161, 69);
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  text-align: center;
+  width: 26rem;
+  border-radius: 0 0 2rem 2rem;
+  padding: 1rem 2rem 2rem 2rem;
+  margin: 0 1rem;
+}
+.auth_form--wAN0cUuV .passwordContainerActive--EaX4EtbY {
+  background: rgb(144, 161, 69);
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  text-align: center;
+  border-radius: 0 0 2rem 2rem;
+  padding: 1rem 2rem 2rem 2rem;
+  margin: 0 1rem;
+  width: 26rem;
+  animation-name: passwordContainerColor--yQoue6gC;
+  animation-duration: 3s;
+}
+
+.grid_container--bVNiUEzc {
+  grid-template-columns: 1;
+  grid-template-rows: 1;
+  position: relative;
+  background: #202422;
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  width: auto;
+  height: 100%;
+  margin: auto;
+}
+.grid_container--bVNiUEzc .grid_element--MsiOUL23 {
+  grid-column: 1;
+  position: relative;
+  background: #333;
+  width: auto;
+  height: auto;
+  padding: 0;
+  backdrop-filter: blur(2px);
+}
+
+@keyframes loginContainerColor--mUBfCVjw {
+  0% {
+    background: rgb(112, 126, 50);
+  }
+  99% {
+    background: rgb(80, 90, 36);
+  }
+}
+@keyframes passwordContainerColor--yQoue6gC {
+  0% {
+    background: rgb(112, 126, 50);
+  }
+  99% {
+    background: rgb(144, 161, 69);
+  }
+}
+/*!******************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/sass/common.module.scss (1) ***!
+  \******************************************************************************************************************************************************/
+input {
+  min-width: 10rem;
+  font-size: 1.7rem;
+  border: none;
+  width: auto;
+}
+
+.inputContainer--ExoO0L_c {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 90%;
+}
+
+.inputField--FLxdetk6 {
+  text-align: start;
+  font-size: 1.7rem;
+  padding: 0.2rem 1rem;
+  border-radius: 2rem;
+  height: 2rem;
+  transition: all 0.3s;
+  width: auto;
+  margin: 1rem;
+}
+
+._inputFieldAttr--J7Mvf0Mk {
+  width: 3rem;
+}
+
+@keyframes attributeAnimation--CZpUKxtR {}
+* {
+  margin: 0;
+  padding: 0;
+}
+*:focus, * :active {
+  outline: none;
+}
+
+body,
+html {
+  font-family: "Rubik", serif;
+  font-weight: 500;
+  font-size: 10px;
+  height: 100%;
+  background: #202422;
+}
+
+.app--xz0FjTx5 {
+  height: auto;
+}
+
+#root--lvly4_j5 {
+  height: auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+span {
+  font-size: 1.4rem;
+  color: rgb(229, 255, 112);
+}

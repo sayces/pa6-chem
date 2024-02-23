@@ -1,56 +1,28 @@
 import path from "path";
-import HTMLWebpackPlugin from "html-webpack-plugin";
 import webpack from "webpack";
-import type { Configuration as DevServerConfiguration } from "webpack-dev-server";
-import type { Configuration } from "webpack";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-const devServer: DevServerConfiguration = {};
+import { buildWebpack } from './config/build/buildWebpack';
+import { BuildMode, BuildPaths } from "./config/build/buildOptions";
 
+interface EnvVars {
+  mode?: BuildMode;
+  port?: number;
+}
 
-export default (env: any) => {
+export default (env: EnvVars) => {
   
+  const paths: BuildPaths = {
+    output: path.resolve(__dirname, 'build'),
+    entry: path.resolve(__dirname, 'src', 'index.tsx'),
+    html: path.resolve(__dirname, 'public', 'index.html'),
+    public: path.resolve(__dirname, 'public'),
+    src: path.resolve(__dirname, 'src'),
+}
 
-  const config: Configuration = {
-    devServer: {
-      port: 5005,
-      open: true,
-    },
-    mode: env.mode ?? "development",
-    entry: {
-      main: path.resolve(__dirname, "src", "index.tsx"),
-    },
-    output: {
-      filename: "[name].[contenthash].js",
-      path: path.resolve(__dirname, "build"),
-      clean: true,
-    },
-    plugins: [
-      new HTMLWebpackPlugin({
-        title: `youko's chemistry`,
-        template: path.resolve(__dirname, "public", "index.html"),
-      }),
-      new MiniCssExtractPlugin({}),
-    ],
-    module: {
-      rules: [
-        {
-          test: /\.scss$/i,
-          use: [
-            "style-loader", "css-loader", "sass-loader"
-          ],
-          exclude: /node_modules/,
-        },
-        {
-          test: /\.([cm]?ts|tsx)$/,
-          use: "ts-loader",
-          exclude: /node_modules/,
-        },
-      ],
-    },
-    resolve: {
-      extensions: [".tsx", ".ts", ".jsx", ".js"],
-    },
-  };
-
+const config: webpack.Configuration = buildWebpack({
+    port: env.port ?? 5005,
+    mode: env.mode ?? 'development',
+    paths
+  })
+  
   return config;
 };

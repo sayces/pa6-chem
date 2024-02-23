@@ -1,13 +1,16 @@
 @import "/src/sass/common.module.scss";
 
-.auth_form {
+.authForm {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   background: $meta_color_dark;
   flex-direction: column;
-  align-items: center;
-  padding: 2rem;
+  align-items: start;
+  padding: 1rem;
   width: 28rem;
+  min-height: auto;
+  backdrop-filter: blur(1rem);
+  // opacity: 0.5;
   
   .auth_label {
     font-size: 2rem;
@@ -16,31 +19,65 @@
     margin: 2rem;
   }
 
-  .login_container {
+  .loginContainer {
     background: rgb(80 90 36);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: start;
     text-align: center;
-    width: 90%;
+    
     border-radius: 2rem 2rem 0 0;
     padding: 2rem 2rem 1rem 2rem;
     margin: 0 1rem;
+    width: 24rem;
+   
+  }
+
+  .loginContainerActive {
+    background: rgb(80 90 36);
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    text-align: center;
     
+    border-radius: 2rem 2rem 0 0;
+    padding: 2rem 2rem 1rem 2rem;
+    margin: 0 1rem;
+    width: 24rem;
+    
+     
+    animation-name: loginContainerColor; 
+    animation-duration: 3s;
     
   }
-  .password_container {
+
+  .passwordContainer {
     background: rgb(144 161 69);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: start;
     text-align: center;
-    width: 90%;
+    width: 24rem;
     border-radius: 0 0 2rem 2rem;
     padding: 1rem 2rem 2rem 2rem;
-    margin: 0 1rem ;
+    margin: 0 1rem;
+   
+  }
+  
+  .passwordContainerActive {
+    background: rgb(144 161 69);
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    text-align: center;
     
-    
+    border-radius: 0 0 2rem 2rem;
+    padding: 1rem 2rem 2rem 2rem;
+    margin: 0 1rem;
+    width: 24rem;
+
+    animation-name: passwordContainerColor; 
+    animation-duration: 3s;
   }
 }
 
@@ -53,7 +90,7 @@
   gap: 1rem;
   align-items: center;
   
-  width: 90%;
+  width: auto;
   height: 100%;
   margin: auto;
   
@@ -65,5 +102,29 @@
     height: auto;
     padding: 0;
     backdrop-filter: blur(2px);
+  }
+}
+
+@keyframes loginContainerColor {
+  // 0% {
+  //   background: rgb(80 90 36);
+  // }
+  0% {
+    background: rgb(112, 126, 50);
+  }
+  99% {
+    background: rgb(80 90 36);
+  }
+}
+
+@keyframes passwordContainerColor {
+  // 0% {
+  //   background: rgb(144 161 69);
+  // }
+  0% {
+    background: rgb(112, 126, 50);
+  }
+  99% {
+    background: rgb(144 161 69);
   }
 }

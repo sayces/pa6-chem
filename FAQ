@@ -1,0 +1,5 @@
+docs:
+
+1. the presence a className of a selector starts with an underscore means the selector's component may be hidden before some action
+
+2.

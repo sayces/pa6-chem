@@ -2,7 +2,7 @@
 @import '../../sass/common.module';
 
 button {
-  font-family: "Jost", serif;
+  
   font-weight: bolder;
  
   border-radius: 2rem;
@@ -10,12 +10,13 @@ button {
 
   background-color: $meta_color;
 
-  width: 20%;
-  height: 4rem;
+  width: 2.4rem;
+  height: 2.4rem;
 
   margin: 1rem;
 
   transition: all 0.2s;
+  padding: 0 .5rem;
 
   ._button_snippet {
     color: $meta_color_dark_2;
@@ -45,11 +46,18 @@ button {
  
 }
 
-._small_button {
-  width: 5rem;
-  background: $meta_color_3;
+.smallButton {
+  width: auto;
+  height: 2.4rem;
+  background: $meta_color;
+  transition: all 0.3s;
 }
 
-._medium_button {
-  width: 16rem;
+.attr_button_disabled {
+  display: none;
+}
+
+.attr_button {
+  margin: 1rem 0rem;
+  width: 2.4rem;
 }

@@ -1,17 +1,25 @@
 @import "../../sass/common.module.scss";
 
 a {
-  font-size: 2rem;
-  color: rgb(134, 32, 32);
+  font-size: 1.7rem;
+  color: rgb(119, 57, 57);
+  transition: all 0.2s;
+  text-decoration: none;
+  &:hover {
+    color: rgb(151, 42, 42);
+    text-decoration: underline;
+  }
 }
 
 .medialink {
   filter: drop-shadow(0 0 3px $meta_color);
   transform:scale(70%);
   justify-content: center;
+  width: 4rem;
 }
 
-.link_button {
-  width: 4rem;
+.link {
+  width: auto;
+  margin: 1rem;
 }
 

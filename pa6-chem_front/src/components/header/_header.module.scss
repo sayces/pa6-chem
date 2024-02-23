@@ -12,25 +12,24 @@
 
   .header_box {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     justify-items: center;
     gap: 2rem;
     align-items: center;
     width: 80%;
     background: #191b19;
-    border-radius: 0 0 2rem 2rem;
+    border-radius: 0 0 1rem 1rem;
     transition: all 0.4s;
+    padding: 0 3rem;
 
     .logotype {
       position: sticky;
       text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      
       margin: 1rem;
       color: $meta_color;
       // filter: drop-shadow(0 0 2px $meta_color);
-      font-size: 3rem;
+      
       line-height: 2.5rem;
       height: 3rem;
       font-weight: 300;
@@ -42,6 +41,11 @@
       font-size: auto;
     }
   }
+}
+
+.buttonSection {
+  display: flex;
+
 }
 //     .signup_button {
 //       text-align: center;

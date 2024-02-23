@@ -1,16 +1,34 @@
-import React from 'react';
-import header_styles from './_header.module.scss';
+import React, { useState } from 'react';
+import headerStyles from './_header.module.scss';
 import Logo from './header-items/Logo';
 import SmallButton from '../button/SmallButton';
 
 
 
 export default function HeaderContainer() {
+
+  const [loginLinkIsActive, setLoginLinkIsActive] = useState(true)
+
+  
+
+  const handleLoginLinkOnHover = () => {
+    setLoginLinkIsActive(true);
+  }
+  
+  const handleLoginLinkOnBlur = () => {
+    setLoginLinkIsActive(false);
+  }
+
   return (
-    <header className={header_styles.header_container}>
-      <div className={header_styles.header_box}>
+    <header className={headerStyles.header_container}>
+      <div className={headerStyles.header_box}>
         <Logo/>
-        <SmallButton />
+        <section className={headerStyles.buttonSection}>
+          <SmallButton onClick={handleLoginLinkOnHover} onBlur={handleLoginLinkOnBlur}>{loginLinkIsActive && 'войти'}</SmallButton>
+          <SmallButton />
+          <SmallButton />
+        </section>
+        
        
       </div>
     </header>

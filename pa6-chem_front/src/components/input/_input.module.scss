@@ -1,16 +1,54 @@
 
 input {
-  font-family: "Jost", italic;
-  font-weight: 600;
-  font-size: 2rem;
+  min-width: 10rem;
+  font-size: 1.7rem;
   border: none;
+  width: auto;
+  
 }
 
-._input {
-    text-align: center;
-    font-size: 2rem;
-    padding: 0.2rem 1rem;
-    border-radius: 2rem;
-    caret-shape: auto;
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  transition: all 0.3s;
 }
 
+.inputField {
+  text-align: start;
+  font-size: 1.3rem;
+  padding: 0.2rem 1rem;
+  border-radius: 2rem;
+  height: 2rem;
+  
+  width: 50%;
+  margin: 1rem;
+  transition: all 0.3s ease-out;
+  &:focus {
+    width: 70%;
+    transition: all 0.3s ease-out;
+    
+  }
+}
+
+
+
+
+._inputFieldAttr_yellow {
+  background: #000;
+}
+._inputFieldAttr_red {
+  
+}
+._inputFieldAttr_green {
+  
+}
+
+
+
+@keyframes attributeAnimation {
+  0% {
+    
+  }
+}

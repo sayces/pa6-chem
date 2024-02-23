@@ -5,6 +5,8 @@ import links from '../links/links.json';
 
 
 export default function HeaderContainer() {
+
+
   return (
     <footer className={footer_styles.footer_container}>
       <div className={footer_styles.footer_box}>
@@ -15,8 +17,9 @@ export default function HeaderContainer() {
         <div className={footer_styles.links}>
           {
             
-            links.map(link => 
-              <MediaLink link={link} key={link.name}/>
+            links.map((linka: any) => 
+              <MediaLink linka={linka} key={linka.link}/>
+              
             )
             
           }
@@ -26,3 +29,6 @@ export default function HeaderContainer() {
     </footer>
   )
 }
+
+
+

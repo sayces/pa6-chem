@@ -1,14 +1,9 @@
-import React from 'react';
-import styles from './_button.module.scss';
+"strict mode";
 
-export default function SmallButton() {
-  return (
-      <>
-        <button className={styles._small_button}>
-          <p className={styles._button_snippet}>
-            🧪
-          </p>
-        </button> 
-      </>
-  )
+import React from "react";
+import buttonStyles from "./_button.module.scss";
+
+export default function SmallButton({ children, onClick, onBlur}: any) {
+
+  return <button className={buttonStyles.smallButton} onBlur={onBlur} onClick={onClick}>{children}</button>;
 }

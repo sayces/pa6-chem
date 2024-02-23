@@ -1,10 +1,10 @@
 [
   {
     "name": "login",
-    "placeholder": "введите ваш логин"
+    "placeholder": "логин / номер телефона"
   },
   {
     "name": "password",
-    "placeholder": "введите ваш пароль"
+    "placeholder": "пароль"
   }
 ]
