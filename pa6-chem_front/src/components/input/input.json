@@ -6,5 +6,9 @@
   {
     "name": "password",
     "placeholder": "пароль"
+  },
+  {
+    "name": "password",
+    "placeholder": "повторите пароль"
   }
 ]

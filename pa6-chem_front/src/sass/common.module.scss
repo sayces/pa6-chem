@@ -1,36 +1,44 @@
 // @import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 // @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
-@import './_colors.module';
-@import '../components/input/_input.module';
-
+@import "./_colors.module";
+@import "../components/input/_input.module";
+@import "./media.module.scss";
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 
-  &:focus, :active{
+  &:focus,
+  :active {
     outline: none;
   }
 }
 
-
 body,
 html {
-  font-family: "Rubik", serif;
+  font-family: "Lucida Console", "Roboto Mono", monospace;
   font-weight: 500;
+  font-optical-sizing: auto;
+  font-style: normal;
   font-size: 10px;
-  height: 100%;
-  background: $meta_color_dark_2;
+  background: black;
+  
+  width: auto;
 }
 
 .app {
-  height: auto;
-}
-
-#root {
-  height: auto;
+  position: absolute;
+  display: flex;
+  margin: 1rem;
+  min-height: 97%;
+  width: auto;
+  flex-direction: column;
+  background-color: rgb(238, 238, 238);
+  border-radius: 1rem;
 }
 
 h1 {
@@ -44,4 +52,5 @@ p {
 span {
   font-size: 1.4rem;
   color: $meta_color;
+  text-shadow: 0 0 4px black;
 }

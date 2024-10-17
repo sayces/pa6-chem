@@ -1,31 +1,178 @@
-/*!****************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/header/_header.module.scss ***!
-  \****************************************************************************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap);
-/*!****************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/button/_button.module.scss ***!
-  \****************************************************************************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap);
-/*!****************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/footer/_footer.module.scss ***!
-  \****************************************************************************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap);
-/*!**************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/links/_links.module.scss ***!
-  \**************************************************************************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap);
 /*!*********************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/pages/pages_styles/pages_styles.module.scss ***!
   \*********************************************************************************************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap);
-/*!************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/pages/StarterPage/main/auth_styles.module.scss ***!
-  \************************************************************************************************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap);
+/*!****************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/header/_header.module.scss ***!
+  \****************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap);
+/*!****************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/button/_button.module.scss ***!
+  \****************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap);
+/*!****************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/footer/_footer.module.scss ***!
+  \****************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap);
+/*!**************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/links/_links.module.scss ***!
+  \**************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap);
+/*!******************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/main/auth_styles.module.scss ***!
+  \******************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap);
+/*!***************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/banner/banner.module.scss ***!
+  \***************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap);
 /*!**************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/sass/common.module.scss ***!
   \**************************************************************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap);
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/pages/pages_styles/pages_styles.module.scss (1) ***!
+  \*************************************************************************************************************************************************************************************/
+input {
+  min-width: 10rem;
+  font-size: 1.7rem;
+  border: none;
+  width: auto;
+}
+
+.inputContainer--xWjDy9Gz {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.inputField--rxK4rBiV {
+  text-align: start;
+  font-size: 1.3rem;
+  padding: 0.2rem 1rem;
+  border-radius: 2rem;
+  height: 2rem;
+  width: 50%;
+  margin: 1rem;
+  transition: all 0.3s ease-out;
+}
+.inputField--rxK4rBiV:focus {
+  width: 70%;
+  transition: all 0.3s ease-out;
+}
+
+._inputFieldAttr_yellow--oBr3tPux {
+  background: #000;
+}
+
+@keyframes attributeAnimation--jn9bbvX9 {}
+* {
+  margin: 0;
+  padding: 0;
+}
+*:focus, * :active {
+  outline: none;
+}
+
+body,
+html {
+  font-family: "Lucida Console", "Roboto Mono", monospace;
+  font-weight: 500;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 10px;
+  height: 100%;
+  background: black;
+}
+
+.app--R8RIpULO {
+  position: absolute;
+  margin: 1rem;
+  height: 99%;
+  width: 99%;
+  display: flex;
+  background-color: rgb(238, 238, 238);
+  border-radius: 4px;
+  border: 1rem;
+}
+
+#root--qStH9a0T {
+  display: flex;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+span {
+  font-size: 1.4rem;
+  color: rgb(229, 255, 112);
+}
+
+.page--wHL3S7Q9 {
+  position: static;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  padding: auto;
+  justify-content: center;
+}
+.page--wHL3S7Q9 .starter_page--BylD1LyJ {
+  position: relative;
+  margin: 10rem 0;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+  border-radius: 2rem;
+}
+
+.main_page--yt_3qlDy {
+  position: relative;
+  background: rgb(32, 36, 34);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 99%;
+  position: relative;
+}
+.main_page--yt_3qlDy .grid_container--iPwr7qhM {
+  position: relative;
+  background: #202422;
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  grid-template-rows: 100rem;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  height: 100%;
+  margin: auto;
+}
+.main_page--yt_3qlDy .grid_container--iPwr7qhM .grid_element--k8ySCLKq {
+  position: relative;
+  background: rgb(32, 36, 34);
+  width: auto;
+  height: 100%;
+  padding: 0;
+  backdrop-filter: blur(2px);
+}
+
+@media (max-width: 900px) {
+  .grid_container--iPwr7qhM {
+    grid-template-columns: 100% !important;
+    grid-template-rows: repeat(3, 50rem) !important;
+    margin: 4rem 0;
+    width: 90% !important;
+  }
+}
 /*!********************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/header/_header.module.scss (1) ***!
   \********************************************************************************************************************************************************************/
@@ -39,23 +186,28 @@ input {
 .inputContainer--ATTmLXB_ {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  width: 90%;
+  justify-content: space-between;
+  width: 100%;
+  transition: all 0.3s;
 }
 
 .inputField--_k9VFdIj {
   text-align: start;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   padding: 0.2rem 1rem;
   border-radius: 2rem;
   height: 2rem;
-  transition: all 0.3s;
-  width: auto;
+  width: 50%;
   margin: 1rem;
+  transition: all 0.3s ease-out;
+}
+.inputField--_k9VFdIj:focus {
+  width: 70%;
+  transition: all 0.3s ease-out;
 }
 
-._inputFieldAttr--sgOjb6cD {
-  width: 3rem;
+._inputFieldAttr_yellow--HdB7zBCY {
+  background: #000;
 }
 
 @keyframes attributeAnimation--aWj2sEIO {}
@@ -69,19 +221,28 @@ input {
 
 body,
 html {
-  font-family: "Rubik", serif;
+  font-family: "Lucida Console", "Roboto Mono", monospace;
   font-weight: 500;
+  font-optical-sizing: auto;
+  font-style: normal;
   font-size: 10px;
   height: 100%;
-  background: #202422;
+  background: black;
 }
 
 .app--WUvkeliF {
-  height: auto;
+  position: absolute;
+  margin: 1rem;
+  height: 99%;
+  width: 99%;
+  display: flex;
+  background-color: rgb(238, 238, 238);
+  border-radius: 4px;
+  border: 1rem;
 }
 
 #root--_dABeQpw {
-  height: auto;
+  display: flex;
 }
 
 h1 {
@@ -107,7 +268,7 @@ span {
 }
 .header_container--XS0chiU5 .header_box--aak9u0AH {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   justify-items: center;
   gap: 2rem;
   align-items: center;
@@ -115,13 +276,11 @@ span {
   background: #191b19;
   border-radius: 0 0 1rem 1rem;
   transition: all 0.4s;
+  padding: 0 3rem;
 }
 .header_container--XS0chiU5 .header_box--aak9u0AH .logotype--Qcyb8Utd {
   position: sticky;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin: 1rem;
   color: rgb(229, 255, 112);
   line-height: 2.5rem;
@@ -132,6 +291,10 @@ span {
   color: #FFF;
   font-weight: 200;
   font-size: auto;
+}
+
+.buttonSection--yakUgiMx {
+  display: flex;
 }
 
 @media screen and (max-width: 900px) {
@@ -155,23 +318,28 @@ input {
 .inputContainer--YWACxNd9 {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  width: 90%;
+  justify-content: space-between;
+  width: 100%;
+  transition: all 0.3s;
 }
 
 .inputField--iTotDJ1x {
   text-align: start;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   padding: 0.2rem 1rem;
   border-radius: 2rem;
   height: 2rem;
-  transition: all 0.3s;
-  width: auto;
+  width: 50%;
   margin: 1rem;
+  transition: all 0.3s ease-out;
+}
+.inputField--iTotDJ1x:focus {
+  width: 70%;
+  transition: all 0.3s ease-out;
 }
 
-._inputFieldAttr--V2Qxc243 {
-  width: 3rem;
+._inputFieldAttr_yellow--NYk7JaI9 {
+  background: #000;
 }
 
 @keyframes attributeAnimation--hTmsEUsx {}
@@ -185,19 +353,28 @@ input {
 
 body,
 html {
-  font-family: "Rubik", serif;
+  font-family: "Lucida Console", "Roboto Mono", monospace;
   font-weight: 500;
+  font-optical-sizing: auto;
+  font-style: normal;
   font-size: 10px;
   height: 100%;
-  background: #202422;
+  background: black;
 }
 
 .app--eny0hiMw {
-  height: auto;
+  position: absolute;
+  margin: 1rem;
+  height: 99%;
+  width: 99%;
+  display: flex;
+  background-color: rgb(238, 238, 238);
+  border-radius: 4px;
+  border: 1rem;
 }
 
 #root--d0bgqQYI {
-  height: auto;
+  display: flex;
 }
 
 h1 {
@@ -222,9 +399,10 @@ button {
   height: 2.4rem;
   margin: 1rem;
   transition: all 0.2s;
+  padding: 0 0.5rem;
 }
 button ._button_snippet--hY1jbZiU {
-  color: #202422;
+  color: rgba(196, 196, 196, 0.0823529412);
   text-align: center;
 }
 button:hover {
@@ -232,7 +410,7 @@ button:hover {
   cursor: pointer;
 }
 button:hover ._button_snippet--hY1jbZiU {
-  color: #202422;
+  color: rgba(196, 196, 196, 0.0823529412);
   text-align: center;
 }
 button:active {
@@ -244,9 +422,11 @@ button:active ._button_snippet--hY1jbZiU {
   text-align: center;
 }
 
-.small_button--Uh6RwiC_ {
-  width: 2.4rem;
+.smallButton--urfXWg3y {
+  width: auto;
+  height: 2.4rem;
   background: rgb(229, 255, 112);
+  transition: all 0.3s;
 }
 
 .attr_button_disabled--m0t5m1Ks {
@@ -270,23 +450,28 @@ input {
 .inputContainer--AHKq55hx {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  width: 90%;
+  justify-content: space-between;
+  width: 100%;
+  transition: all 0.3s;
 }
 
 .inputField--KuemnqNc {
   text-align: start;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   padding: 0.2rem 1rem;
   border-radius: 2rem;
   height: 2rem;
-  transition: all 0.3s;
-  width: auto;
+  width: 50%;
   margin: 1rem;
+  transition: all 0.3s ease-out;
+}
+.inputField--KuemnqNc:focus {
+  width: 70%;
+  transition: all 0.3s ease-out;
 }
 
-._inputFieldAttr--__JP7nun {
-  width: 3rem;
+._inputFieldAttr_yellow--JkotXcXg {
+  background: #000;
 }
 
 @keyframes attributeAnimation--qRc0UBzG {}
@@ -300,19 +485,28 @@ input {
 
 body,
 html {
-  font-family: "Rubik", serif;
+  font-family: "Lucida Console", "Roboto Mono", monospace;
   font-weight: 500;
+  font-optical-sizing: auto;
+  font-style: normal;
   font-size: 10px;
   height: 100%;
-  background: #202422;
+  background: black;
 }
 
 .app--ehShh_2L {
-  height: auto;
+  position: absolute;
+  margin: 1rem;
+  height: 99%;
+  width: 99%;
+  display: flex;
+  background-color: rgb(238, 238, 238);
+  border-radius: 4px;
+  border: 1rem;
 }
 
 #root--UgmJOo_P {
-  height: auto;
+  display: flex;
 }
 
 h1 {
@@ -372,23 +566,28 @@ input {
 .inputContainer--qsksgVT5 {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  width: 90%;
+  justify-content: space-between;
+  width: 100%;
+  transition: all 0.3s;
 }
 
 .inputField--ufs2jkeY {
   text-align: start;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   padding: 0.2rem 1rem;
   border-radius: 2rem;
   height: 2rem;
-  transition: all 0.3s;
-  width: auto;
+  width: 50%;
   margin: 1rem;
+  transition: all 0.3s ease-out;
+}
+.inputField--ufs2jkeY:focus {
+  width: 70%;
+  transition: all 0.3s ease-out;
 }
 
-._inputFieldAttr--Uo3lBK7e {
-  width: 3rem;
+._inputFieldAttr_yellow--oUau4Kha {
+  background: #000;
 }
 
 @keyframes attributeAnimation--FUzSnjxX {}
@@ -402,19 +601,28 @@ input {
 
 body,
 html {
-  font-family: "Rubik", serif;
+  font-family: "Lucida Console", "Roboto Mono", monospace;
   font-weight: 500;
+  font-optical-sizing: auto;
+  font-style: normal;
   font-size: 10px;
   height: 100%;
-  background: #202422;
+  background: black;
 }
 
 .app--ZEycCKYw {
-  height: auto;
+  position: absolute;
+  margin: 1rem;
+  height: 99%;
+  width: 99%;
+  display: flex;
+  background-color: rgb(238, 238, 238);
+  border-radius: 4px;
+  border: 1rem;
 }
 
 #root--R6YPFXKW {
-  height: auto;
+  display: flex;
 }
 
 h1 {
@@ -452,135 +660,6 @@ a:hover {
   width: auto;
   margin: 1rem;
 }
-/*!*************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/pages/pages_styles/pages_styles.module.scss (1) ***!
-  \*************************************************************************************************************************************************************************************/
-input {
-  min-width: 10rem;
-  font-size: 1.7rem;
-  border: none;
-  width: auto;
-}
-
-.inputContainer--xWjDy9Gz {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 90%;
-}
-
-.inputField--rxK4rBiV {
-  text-align: start;
-  font-size: 1.7rem;
-  padding: 0.2rem 1rem;
-  border-radius: 2rem;
-  height: 2rem;
-  transition: all 0.3s;
-  width: auto;
-  margin: 1rem;
-}
-
-._inputFieldAttr--qnfj_ONY {
-  width: 3rem;
-}
-
-@keyframes attributeAnimation--jn9bbvX9 {}
-* {
-  margin: 0;
-  padding: 0;
-}
-*:focus, * :active {
-  outline: none;
-}
-
-body,
-html {
-  font-family: "Rubik", serif;
-  font-weight: 500;
-  font-size: 10px;
-  height: 100%;
-  background: #202422;
-}
-
-.app--R8RIpULO {
-  height: auto;
-}
-
-#root--qStH9a0T {
-  height: auto;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-p {
-  font-size: 1.4rem;
-}
-
-span {
-  font-size: 1.4rem;
-  color: rgb(229, 255, 112);
-}
-
-.page--wHL3S7Q9 {
-  position: static;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  padding: auto;
-  justify-content: center;
-}
-.page--wHL3S7Q9 .starter_page--BylD1LyJ {
-  position: relative;
-  margin: 10rem 0;
-  display: flex;
-  justify-content: center;
-  width: 80%;
-  height: 100%;
-  border-radius: 2rem;
-}
-
-.main_page--yt_3qlDy {
-  position: relative;
-  background: rgb(32, 36, 34);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 90%;
-  position: relative;
-}
-.main_page--yt_3qlDy .grid_container--iPwr7qhM {
-  position: relative;
-  background: #202422;
-  display: grid;
-  gap: 1rem;
-  align-items: center;
-  grid-template-rows: 100rem;
-  grid-template-columns: repeat(3, 1fr);
-  width: 90%;
-  height: 100%;
-  margin: auto;
-}
-.main_page--yt_3qlDy .grid_container--iPwr7qhM .grid_element--k8ySCLKq {
-  position: relative;
-  background: rgb(32, 36, 34);
-  width: auto;
-  height: 100%;
-  padding: 0;
-  backdrop-filter: blur(2px);
-}
-
-@media (max-width: 900px) {
-  .grid_container--iPwr7qhM {
-    grid-template-columns: 100% !important;
-    grid-template-rows: repeat(3, 50rem) !important;
-    margin: 4rem 0;
-    width: 90% !important;
-  }
-}
 /*!**************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/input/_input.module.scss ***!
   \**************************************************************************************************************************************************************/
@@ -594,29 +673,34 @@ input {
 .inputContainer--_tWRy9rJ {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  width: 90%;
+  justify-content: space-between;
+  width: 100%;
+  transition: all 0.3s;
 }
 
 .inputField--vvFkzQPc {
   text-align: start;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   padding: 0.2rem 1rem;
   border-radius: 2rem;
   height: 2rem;
-  transition: all 0.3s;
-  width: auto;
+  width: 50%;
   margin: 1rem;
+  transition: all 0.3s ease-out;
+}
+.inputField--vvFkzQPc:focus {
+  width: 70%;
+  transition: all 0.3s ease-out;
 }
 
-._inputFieldAttr--U1rgf9bB {
-  width: 3rem;
+._inputFieldAttr_yellow--JCk7giti {
+  background: #000;
 }
 
 @keyframes attributeAnimation--zvT4FQvN {}
-/*!****************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/pages/StarterPage/main/auth_styles.module.scss (1) ***!
-  \****************************************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/main/auth_styles.module.scss (1) ***!
+  \**********************************************************************************************************************************************************************/
 input {
   min-width: 10rem;
   font-size: 1.7rem;
@@ -624,29 +708,34 @@ input {
   width: auto;
 }
 
-.inputContainer--BdgJpRbb {
+.inputContainer--MR6DXZku {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  width: 90%;
+  justify-content: space-between;
+  width: 100%;
+  transition: all 0.3s;
 }
 
-.inputField--qJDTl3M_ {
+.inputField--xFTAnqNh {
   text-align: start;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   padding: 0.2rem 1rem;
   border-radius: 2rem;
   height: 2rem;
-  transition: all 0.3s;
-  width: auto;
+  width: 50%;
   margin: 1rem;
+  transition: all 0.3s ease-out;
+}
+.inputField--xFTAnqNh:focus {
+  width: 70%;
+  transition: all 0.3s ease-out;
 }
 
-._inputFieldAttr--KcsTo2lI {
-  width: 3rem;
+._inputFieldAttr_yellow--rzXmF5Yc {
+  background: #000;
 }
 
-@keyframes attributeAnimation--tQhu4UNm {}
+@keyframes attributeAnimation--UoT4F9JA {}
 * {
   margin: 0;
   padding: 0;
@@ -657,19 +746,28 @@ input {
 
 body,
 html {
-  font-family: "Rubik", serif;
+  font-family: "Lucida Console", "Roboto Mono", monospace;
   font-weight: 500;
+  font-optical-sizing: auto;
+  font-style: normal;
   font-size: 10px;
   height: 100%;
-  background: #202422;
+  background: black;
 }
 
-.app--soQ_SGyS {
-  height: auto;
+.app--kF7vSJ2m {
+  position: absolute;
+  margin: 1rem;
+  height: 99%;
+  width: 99%;
+  display: flex;
+  background-color: rgb(238, 238, 238);
+  border-radius: 4px;
+  border: 1rem;
 }
 
-#root--qOHQmNIn {
-  height: auto;
+#root--gHN4NFIc {
+  display: flex;
 }
 
 h1 {
@@ -685,24 +783,25 @@ span {
   color: rgb(229, 255, 112);
 }
 
-.auth_form--wAN0cUuV {
+.authForm--QLReLW6u {
   display: flex;
-  justify-content: center;
-  background: #191b19;
+  justify-content: space-between;
+  background: rgba(167, 167, 167, 0.0823529412);
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   padding: 1rem;
   width: 28rem;
-  min-height: 20rem;
+  min-height: auto;
   backdrop-filter: blur(1rem);
+  border-radius: 1rem;
 }
-.auth_form--wAN0cUuV .auth_label--tlvj1RzT {
+.authForm--QLReLW6u .auth_label--qFb7kmvF {
   font-size: 2rem;
   font-weight: 700;
   text-indent: 0;
   margin: 2rem;
 }
-.auth_form--wAN0cUuV .loginContainer--_ST1lT83 {
+.authForm--QLReLW6u .loginContainer--imtrvZKa {
   background: rgb(80, 90, 36);
   display: flex;
   flex-direction: row;
@@ -711,9 +810,9 @@ span {
   border-radius: 2rem 2rem 0 0;
   padding: 2rem 2rem 1rem 2rem;
   margin: 0 1rem;
-  width: 26rem;
+  width: 24rem;
 }
-.auth_form--wAN0cUuV .loginContainerActive--kTu0yJAA {
+.authForm--QLReLW6u .loginContainerActive--NaUhNkVH {
   background: rgb(80, 90, 36);
   display: flex;
   flex-direction: row;
@@ -722,22 +821,22 @@ span {
   border-radius: 2rem 2rem 0 0;
   padding: 2rem 2rem 1rem 2rem;
   margin: 0 1rem;
-  width: 26rem;
-  animation-name: loginContainerColor--mUBfCVjw;
+  width: 24rem;
+  animation-name: loginContainerColor--TqsJPrmH;
   animation-duration: 3s;
 }
-.auth_form--wAN0cUuV .passwordContainer--hd6C00If {
+.authForm--QLReLW6u .passwordContainer--wgBq2N9r {
   background: rgb(144, 161, 69);
   display: flex;
   flex-direction: row;
   justify-content: start;
   text-align: center;
-  width: 26rem;
+  width: 24rem;
   border-radius: 0 0 2rem 2rem;
   padding: 1rem 2rem 2rem 2rem;
   margin: 0 1rem;
 }
-.auth_form--wAN0cUuV .passwordContainerActive--EaX4EtbY {
+.authForm--QLReLW6u .passwordContainerActive--CJqM8Pur {
   background: rgb(144, 161, 69);
   display: flex;
   flex-direction: row;
@@ -746,12 +845,12 @@ span {
   border-radius: 0 0 2rem 2rem;
   padding: 1rem 2rem 2rem 2rem;
   margin: 0 1rem;
-  width: 26rem;
-  animation-name: passwordContainerColor--yQoue6gC;
+  width: 24rem;
+  animation-name: passwordContainerColor--Gcc4Bp1e;
   animation-duration: 3s;
 }
 
-.grid_container--bVNiUEzc {
+.grid_container--eRM62gyk {
   grid-template-columns: 1;
   grid-template-rows: 1;
   position: relative;
@@ -763,7 +862,7 @@ span {
   height: 100%;
   margin: auto;
 }
-.grid_container--bVNiUEzc .grid_element--MsiOUL23 {
+.grid_container--eRM62gyk .grid_element--fq8ia79s {
   grid-column: 1;
   position: relative;
   background: #333;
@@ -773,7 +872,7 @@ span {
   backdrop-filter: blur(2px);
 }
 
-@keyframes loginContainerColor--mUBfCVjw {
+@keyframes loginContainerColor--TqsJPrmH {
   0% {
     background: rgb(112, 126, 50);
   }
@@ -781,13 +880,102 @@ span {
     background: rgb(80, 90, 36);
   }
 }
-@keyframes passwordContainerColor--yQoue6gC {
+@keyframes passwordContainerColor--Gcc4Bp1e {
   0% {
     background: rgb(112, 126, 50);
   }
   99% {
     background: rgb(144, 161, 69);
   }
+}
+/*!*******************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/banner/banner.module.scss (1) ***!
+  \*******************************************************************************************************************************************************************/
+input {
+  min-width: 10rem;
+  font-size: 1.7rem;
+  border: none;
+  width: auto;
+}
+
+.inputContainer--Io07awA8 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.inputField--cXeferKD {
+  text-align: start;
+  font-size: 1.3rem;
+  padding: 0.2rem 1rem;
+  border-radius: 2rem;
+  height: 2rem;
+  width: 50%;
+  margin: 1rem;
+  transition: all 0.3s ease-out;
+}
+.inputField--cXeferKD:focus {
+  width: 70%;
+  transition: all 0.3s ease-out;
+}
+
+._inputFieldAttr_yellow--D0V8a64M {
+  background: #000;
+}
+
+@keyframes attributeAnimation--tRTsrqKQ {}
+* {
+  margin: 0;
+  padding: 0;
+}
+*:focus, * :active {
+  outline: none;
+}
+
+body,
+html {
+  font-family: "Lucida Console", "Roboto Mono", monospace;
+  font-weight: 500;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 10px;
+  height: 100%;
+  background: black;
+}
+
+.app--b6Bsv03k {
+  position: absolute;
+  margin: 1rem;
+  height: 99%;
+  width: 99%;
+  display: flex;
+  background-color: rgb(238, 238, 238);
+  border-radius: 4px;
+  border: 1rem;
+}
+
+#root--qzhrSuqC {
+  display: flex;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+span {
+  font-size: 1.4rem;
+  color: rgb(229, 255, 112);
+}
+
+.banner_caption--Ch783XL7 {
+  width: 2rem;
+  height: 2.4rem;
 }
 /*!******************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/sass/common.module.scss (1) ***!
@@ -802,23 +990,28 @@ input {
 .inputContainer--ExoO0L_c {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  width: 90%;
+  justify-content: space-between;
+  width: 100%;
+  transition: all 0.3s;
 }
 
 .inputField--FLxdetk6 {
   text-align: start;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   padding: 0.2rem 1rem;
   border-radius: 2rem;
   height: 2rem;
-  transition: all 0.3s;
-  width: auto;
+  width: 50%;
   margin: 1rem;
+  transition: all 0.3s ease-out;
+}
+.inputField--FLxdetk6:focus {
+  width: 70%;
+  transition: all 0.3s ease-out;
 }
 
-._inputFieldAttr--J7Mvf0Mk {
-  width: 3rem;
+._inputFieldAttr_yellow--UiU2h3NY {
+  background: #000;
 }
 
 @keyframes attributeAnimation--CZpUKxtR {}
@@ -832,19 +1025,28 @@ input {
 
 body,
 html {
-  font-family: "Rubik", serif;
+  font-family: "Lucida Console", "Roboto Mono", monospace;
   font-weight: 500;
+  font-optical-sizing: auto;
+  font-style: normal;
   font-size: 10px;
   height: 100%;
-  background: #202422;
+  background: black;
 }
 
 .app--xz0FjTx5 {
-  height: auto;
+  position: absolute;
+  margin: 1rem;
+  height: 99%;
+  width: 99%;
+  display: flex;
+  background-color: rgb(238, 238, 238);
+  border-radius: 4px;
+  border: 1rem;
 }
 
 #root--lvly4_j5 {
-  height: auto;
+  display: flex;
 }
 
 h1 {

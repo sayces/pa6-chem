@@ -1,37 +1,36 @@
 @import "/src/sass/common.module.scss";
 
-
-
-.page {
-  position: static;
+.main {
+  position: relative;
   display: flex;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  padding: auto;
-  
+  flex-direction: column;
+  min-height: 7rem;
+  // width: 100%;
+  // height: 100%;
   justify-content: center;
 
   .starter_page {
     position: relative;
-    margin: 10rem 0;
+    margin: 6rem auto;
     display: flex;
     justify-content: center;
-    width: 80%;
+    width: 24rem;
     height: 100%;
     border-radius: 2rem;
+    
     
   }
 }
 
-.main_page {
+.page {
   position: relative;
-  background: rgb(32 36 34);
+  background: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 90%;
+  width: 99%;
+  flex-direction: column;
   
   position: relative;
 
