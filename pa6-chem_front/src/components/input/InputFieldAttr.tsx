@@ -2,7 +2,7 @@ import React from "react";
 import SmallButton from "../button/SmallButton";
 
 
-export default function InputFieldAttr({ onClick, children}: any) {
+export default function InputFieldAttr({ onClick, children, disabled}: any) {
 
-  return <SmallButton onClick={onClick} >{children}</SmallButton>
+  return <SmallButton onClick={onClick} disabled={disabled}>{children}</SmallButton>
 }

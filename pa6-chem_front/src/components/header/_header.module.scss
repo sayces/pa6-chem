@@ -18,27 +18,70 @@
     gap: 2rem;
     align-items: center;
     width: 100%;
-    background: #000000;
+    background: #0000002a;
     border-radius: 0 0 1rem 1rem;
     transition: all 0.4s;
     padding: 0 3rem;
-    border-bottom: .2rem solid #fff;
+    border-bottom: 0.2rem solid #494949;
+    backdrop-filter: blur(2px);
+
+    .logo_section {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      margin: auto 0;
+      padding: auto;
+      align-items: center;
+      justify-content: center;
+
+      .username_box {
+        padding: auto 1rem;
+        margin: auto 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        p.username {
+          margin: 1rem;
+          padding: auto;
+        }
+        a.profile_link {
+          margin: 1rem;
+          padding: 0.2rem;
+          background-color: $meta_color_2;
+          border-radius: 2rem;
+
+          color: $meta_color_dark_3;
+          font-size: 1.4rem;
+
+          padding: 0.2rem 1rem ;
+          color: rgb(85, 85, 85);
+          transition: all 0.2s;
+          text-decoration: none;
+          &:hover {
+            color: rgb(151, 42, 42);
+            text-decoration: underline;
+          }
+        }
+      }
+    }
 
     .logotype {
       position: sticky;
       text-align: center;
-      
+
       margin: 1rem;
       color: $meta_color;
-      // filter: drop-shadow(0 0 2px $meta_color);
-      
+      filter: drop-shadow(0 0 2px $meta_color);
+      font-size: 2rem;
       line-height: 2.5rem;
       height: 3rem;
       font-weight: 300;
     }
 
     .description {
-      color: #FFF;
+      color: #fff;
       font-weight: 200;
       font-size: auto;
     }
@@ -47,23 +90,22 @@
 
 .buttonSection {
   display: flex;
-
 }
 //     .signup_button {
 //       text-align: center;
 //       // background: #e5ff70;
 //       border-radius: 2rem;
-      
+
 //       transition: all 0.2s;
 //       // height: 2rem;
 //       // padding: 1rem;
 //       // margin: 1rem;
-//       // min-width: 10rem; 
+//       // min-width: 10rem;
 //     }
 
 //     ._button_snippet {
 //       color: $meta_color_dark_2;
-      
+
 //       line-height: 2rem;
 //       &::after {
 //         content: ' | ';
@@ -79,10 +121,10 @@
 //       cursor: pointer;
 //       .signup_button {
 //         &::after{
-        
+
 //       }
 //         &::before {
-          
+
 //       }
 //     }
 //   }
@@ -90,19 +132,19 @@
 
 // @keyframes clips_start {
 //   from {
-//     content: '.  '; 
+//     content: '.  ';
 //   }
 //   to {
-//     content: '..'; 
+//     content: '..';
 //   }
 // }
 
 // @keyframes clips_end {
 //   from {
-//     content: '..'; 
+//     content: '..';
 //   }
 //   to {
-//     content: '  .'; 
+//     content: '  .';
 //   }
 // }
 

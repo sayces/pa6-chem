@@ -1,10 +1,8 @@
-
-@import '../../sass/common.module';
+@import "../../sass/common.module";
 
 button {
-  
   font-weight: bolder;
- 
+
   border-radius: 2rem;
   border: none;
 
@@ -14,9 +12,8 @@ button {
   height: 2.4rem;
 
   margin: 1rem;
-
   transition: all 0.2s;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
 
   ._button_snippet {
     color: $meta_color_dark_2;
@@ -24,7 +21,7 @@ button {
   }
 
   &:hover {
-    background-color: rgb(144 161 69); 
+    background-color: rgb(144 161 69);
     cursor: pointer;
 
     ._button_snippet {
@@ -34,16 +31,23 @@ button {
   }
 
   &:active {
-    background-color: rgb(80 90 36);
+    background-color: rgb(92, 104, 42);
     cursor: progress;
-    
+
     ._button_snippet {
       color: #d1d1d1;
       text-align: center;
     }
-  } 
+  }
+  &:disabled {
+    background-color: $meta_color_2;
+    cursor: default;
 
- 
+    ._button_snippet {
+      color: rgb(85, 85, 85);
+      text-align: center;
+    }
+  }
 }
 
 .smallButton {

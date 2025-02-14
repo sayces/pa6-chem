@@ -1,8 +1,16 @@
 import React from 'react'
 import styles from '../_header.module.scss'
+import { useNavigate } from "react-router-dom";
 
 export default function Logo() {
+
+  const navigate = useNavigate();
+
+  const handleLogoButton = () => {
+    navigate("/");
+  }
+
   return (
-    <h1 className={styles.logotype}>chemistry</h1>
+    <a className={styles.logotype} onClick={handleLogoButton}>chemistry</a>
   )
 }
