@@ -4,17 +4,59 @@ import { useAuthStore } from "./store/authStore";
 import AuthForm from "./components/entry/AuthForm";
 import MainPage from "./components/pages/MainPage";
 import ProfilePage from "./components/pages/ProfilePage";
+import GalleryCollection from "./components/gallery/GalleryCollection";
+import Services from "./components/Services/Services";
 
 export default function AppRoutes() {
   const user = useAuthStore((state) => state.user);
 
   return (
     <Routes>
-      <Route path="/" element={<MainPage><HomePage /></MainPage> } />
-      <Route path="/profile" element={user ? <MainPage><ProfilePage /></MainPage> : <Navigate to="/login" />} />
+      <Route
+        path="/"
+        element={
+          <MainPage>
+            <HomePage>
+              <Services />
+              <GalleryCollection />
+              <GalleryCollection />
+            </HomePage>
+          </MainPage>
+        }
+      />
+      <Route
+        path="/profile"
+        element={
+          user ? (
+            <MainPage>
+              <ProfilePage />
+            </MainPage>
+          ) : (
+            <Navigate to="/login" />
+          )
+        }
+      />
+      <Route
+        path="/gallery"
+        element={
+          <MainPage>
+            <HomePage>
+              <GalleryCollection />
+            </HomePage>
+          </MainPage>
+        }
+      />
       <Route
         path="/login"
-        element={user ? <Navigate to="/" /> : <MainPage><AuthForm /></MainPage>}
+        element={
+          user ? (
+            <Navigate to="/" />
+          ) : (
+            <MainPage>
+              <AuthForm />
+            </MainPage>
+          )
+        }
       />
     </Routes>
   );

@@ -26,7 +26,10 @@
   padding: 2rem 4rem;
 
   .home_page {
-    background-color: #000;
+    background-color: #00000025;
+    display: flex;
+    gap: 4rem;
+    padding: 0 2px;
   }
 
   .grid_container {

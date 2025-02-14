@@ -8,7 +8,7 @@ import WelcomeToast from "../welcomeToast/WelcomeToast";
 import gallery_styles from '../gallery/_gallery.module.scss'  
 import GalleryCollection from "../gallery/GalleryCollection";
 
-export default function HomePage() {
+export default function HomePage({children}: any) {
   const user = useAuthStore((state) => state.user);
   const navigate = useNavigate();
 
@@ -16,11 +16,12 @@ export default function HomePage() {
 
   return (
     <div className={page_styles.page}>
-      {toastMessage && user && <WelcomeToast message={toastMessage} />} //
-      Всплывающее приветствие активируется при загрузке страницы при наличии
-      пользователя в хранилище
+      {
+      toastMessage && user && <WelcomeToast message={toastMessage} />
+      // Всплывающее приветствие активируется при загрузке страницы при наличии пользователя в хранилище
+      } 
       <div className={page_styles.home_page}>
-        <GalleryCollection />
+        {children}
       </div>
     </div>
   );
