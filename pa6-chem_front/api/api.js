@@ -23,9 +23,9 @@ export async function createUser(username, password) {
       },
       body: JSON.stringify({ username, password }),
     });
-    return await response.json();
+    return response.json();
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
   }
 }
 

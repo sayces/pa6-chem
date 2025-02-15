@@ -5,8 +5,8 @@ import AuthForm from "./components/entry/AuthForm";
 import MainPage from "./components/pages/MainPage";
 import ProfilePage from "./components/pages/ProfilePage";
 import GalleryCollection from "./components/gallery/GalleryCollection";
-import Services from "./components/Services/Services";
-
+import Services from "./components/services/Services";
+import ImageUpload from "./components/imageUpload/ImageUpload";
 export default function AppRoutes() {
   const user = useAuthStore((state) => state.user);
 
@@ -19,7 +19,7 @@ export default function AppRoutes() {
             <HomePage>
               <Services />
               <GalleryCollection />
-              <GalleryCollection />
+              <Services />
             </HomePage>
           </MainPage>
         }
@@ -42,6 +42,16 @@ export default function AppRoutes() {
           <MainPage>
             <HomePage>
               <GalleryCollection />
+            </HomePage>
+          </MainPage>
+        }
+      />
+      <Route
+        path="/gallery/upload"
+        element={
+          <MainPage>
+            <HomePage>
+              <ImageUpload />
             </HomePage>
           </MainPage>
         }

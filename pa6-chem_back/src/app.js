@@ -1,13 +1,22 @@
 import { sequelize } from "../config/db.js";
 import express from "express";
 import userRoutes from "../routes/userRoutes.js";
+import galleryRoutes from "../routes/galleryRoutes.js";
 import cors from "cors";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 app.use(cors());
 app.use(express.json());
 app.use("/api", userRoutes);
+app.use("/api", galleryRoutes);
+
+app.use("/uploads", express.static("uploads"));
 
 app.use((req, res, next) => {
   console.log(`${req.method} ${req.url}`);

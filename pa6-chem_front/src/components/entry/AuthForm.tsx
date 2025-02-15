@@ -32,8 +32,8 @@ export default function AuthForm() {
   const [toggleAuthLink, setToggleAuthLink] = useState(true); // signIn/signUp page
   const [users, setUsers]: any = useState([]); // all users
 
-  const [username, setUsername] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const [newUser, setNewUser] = useState<{
     username: string;
     password: string;
@@ -86,7 +86,7 @@ export default function AuthForm() {
 
   const handleAddUser = async () => {
     if (toggleAuthLink) {
-      const addedUser = await createUser({ username, password });
+      const addedUser = await createUser( username, password );
       setUsers([...users, addedUser]);
       console.log(users);
     }
