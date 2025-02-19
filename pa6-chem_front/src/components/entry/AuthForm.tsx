@@ -14,7 +14,7 @@ import {
   createUser,
   deleteUser,
   loginUser,
-} from "../../../api/api.js";
+} from "../../../api/apiUser.js";
 import { useAuthStore } from "../../store/authStore";
 
 let customLink = [

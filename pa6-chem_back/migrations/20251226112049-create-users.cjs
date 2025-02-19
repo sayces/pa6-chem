@@ -18,6 +18,14 @@ module.exports = {
         allowNull: true,
         unique: true,
       },
+      roleId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: { model: "roles", key: "roleId" }, // Внешний ключ
+        onUpdate: "CASCADE",
+        onDelete: "CASCADE"
+        
+      },
       password: {
         type: Sequelize.STRING,
         allowNull: false,

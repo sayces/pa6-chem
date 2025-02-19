@@ -21,7 +21,6 @@ export default function HomePage({ children }: any) {
       пользователя в хранилище */}
       <div className={page_styles.home_page}>
         {children}
-        {/* <GalleryCollection /> */}
       </div>
     </div>
   );

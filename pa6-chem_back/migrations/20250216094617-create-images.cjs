@@ -1,30 +1,35 @@
-import {DataTypes, Sequelize} from "sequelize";
-import sequelize from "../config/db.js";
+"use strict";
 
-export default (sequelize, DataTypes) => { const Gallery = sequelize.define(
-    "Gallery",
-    {
+/** @type {import('sequelize-cli').Migration} */
+module.exports = {
+  async up(queryInterface, Sequelize) {
+    await queryInterface.createTable("Images", {
       id: {
         type: Sequelize.DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
         allowNull: false,
       },
-      collectionName: {
+      filename: {
         type: Sequelize.DataTypes.STRING,
         allowNull: false,
-        unique: false,
       },
-      author: {
+      url: {
+        type: Sequelize.DataTypes.STRING,
+        allowNull: false,
+      },
+      size: {
         type: Sequelize.DataTypes.INTEGER,
         allowNull: true,
       },
-      posts: {
+      mimeType: {
         type: Sequelize.DataTypes.STRING,
         allowNull: true,
-        unique: false,
       },
-      
+      imageName: {
+        type: Sequelize.DataTypes.STRING,
+        allowNull: true,
+      },
       createdAt: {
         type: Sequelize.DataTypes.DATE,
         allowNull: false,
@@ -33,12 +38,10 @@ export default (sequelize, DataTypes) => { const Gallery = sequelize.define(
         type: Sequelize.DataTypes.DATE,
         allowNull: false,
       },
-    },
-    {
-      freezeTableName: true,
-      tableName: "Gallery",
-    }
-  );
-  return Gallery
-  ;}
+    });
+  },
 
+  async down(queryInterface, Sequelize) {
+    await queryInterface.dropTable("Images");
+  },
+};

@@ -4,50 +4,44 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable("Gallery", {
-      id: {
-        type: Sequelize.INTEGER,
-        autoIncrement: true,
-        primaryKey: true,
-        allowNull: false,
+    await queryInterface.createTable(
+      "Gallery",
+      {
+        id: {
+          type: Sequelize.DataTypes.INTEGER,
+          autoIncrement: true,
+          primaryKey: true,
+          allowNull: false,
+        },
+        collectionName: {
+          type: Sequelize.DataTypes.STRING,
+          allowNull: false,
+          unique: false,
+        },
+        author: {
+          type: Sequelize.DataTypes.INTEGER,
+          allowNull: true,
+        },
+        posts: {
+          type: Sequelize.DataTypes.STRING,
+          allowNull: true,
+          unique: false,
+        },
+
+        createdAt: {
+          type: Sequelize.DataTypes.DATE,
+          allowNull: false,
+        },
+        updatedAt: {
+          type: Sequelize.DataTypes.DATE,
+          allowNull: false,
+        },
       },
-      author: {
-        type: Sequelize.INTEGER,
-        allowNull: true,
-      },
-      filename: {
-        type: Sequelize.STRING,
-        allowNull: true,
-      },
-      mimeType: {
-        type: Sequelize.STRING,
-        allowNull: true,
-      },
-      url: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      likes: {
-        type: Sequelize.INTEGER,
-        allowNull: true,
-      },
-      size: {
-        type: Sequelize.INTEGER,
-        allowNull: true,
-      },
-      originalName: {
-        type: Sequelize.STRING,
-        allowNull: true,
-      },
-      createdAt: {
-        type: Sequelize.DATE,
-        allowNull: false,
-      },
-      updatedAt: {
-        type: Sequelize.DATE,
-        allowNull: false,
-      },
-    });
+      {
+        freezeTableName: true,
+        tableName: "Gallery",
+      }
+    );
   },
 
   down: async (queryInterface, Sequelize) => {

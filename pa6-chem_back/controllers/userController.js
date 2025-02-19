@@ -1,12 +1,17 @@
 import models from "../models/index.js";
-const { User } = models;
+const { User, Role } = models;
+import db from "../models/index.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 // Получение всех пользователей
 
+
+
 const SECRET_KEY = process.env.SECRET_KEY;
+
 export const getAllUsers = async (req, res) => {
   try {
+    console.log(User, Role)
     const users = await User.findAll();
 
     res.status(200).json(users);
@@ -53,6 +58,15 @@ export const loginUser = async (req, res) => {
 
     const token = jwt.sign({ id: user.id }, SECRET_KEY, { expiresIn: "24h" });
     res.status(200).json({ user, token });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+export const getRoles = async (req, res) => {
+  try {
+    const roles = await Role.findAll();
+    res.status(200).json(roles);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

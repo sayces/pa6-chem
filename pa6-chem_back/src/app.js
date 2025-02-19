@@ -1,4 +1,4 @@
-import { sequelize } from "../config/db.js";
+import sequelize from "../config/db.js";
 import express from "express";
 import userRoutes from "../routes/userRoutes.js";
 import galleryRoutes from "../routes/galleryRoutes.js";

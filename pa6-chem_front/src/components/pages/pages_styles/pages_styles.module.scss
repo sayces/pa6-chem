@@ -23,7 +23,7 @@
   width: auto;
   flex-direction: row;
   border-radius: 10px;
-  padding: 2rem 4rem;
+  padding: 0rem 4rem;
 
   
 
@@ -33,13 +33,13 @@
     gap: 4rem;
     padding: 0 2px;
     justify-content: flex-start;
-    width: auto;
+    width: 70%;
     height: auto;
-    
+    transition: all 0.5s ease-in-out;
 
     & > div:hover {
     
-      cursor: pointer;
+      cursor: auto;
       width: 100%;
       
     

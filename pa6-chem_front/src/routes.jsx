@@ -19,7 +19,6 @@ export default function AppRoutes() {
             <HomePage>
               <Services />
               <GalleryCollection />
-              <Services />
             </HomePage>
           </MainPage>
         }

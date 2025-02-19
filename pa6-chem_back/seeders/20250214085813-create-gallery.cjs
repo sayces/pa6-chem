@@ -7,10 +7,8 @@ module.exports = {
       {
         id: 1,
         author: 1,
-        filename: "test",
-        url: "test",
-        size: 0,
-        likes: 0,
+        collectionName: "test collection",
+        posts: null,
         createdAt: new Date(),
         updatedAt: new Date(),
       }]);
