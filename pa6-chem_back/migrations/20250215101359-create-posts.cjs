@@ -19,10 +19,13 @@ module.exports = {
         allowNull: false,
       },
 
-      images: {
-        type: Sequelize.DataTypes.STRING,
-        allowNull: true,
-      },
+      // images: {
+      //   type: Sequelize.DataTypes.STRING,
+      //   allowNull: true,
+      //   references: { model: "postsimages", key: "imageId" }, // Внешний ключ
+      //   onUpdate: "CASCADE",
+      //   onDelete: "CASCADE"
+      // },
       collection: {
         type: Sequelize.DataTypes.INTEGER,
         allowNull: true,

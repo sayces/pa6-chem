@@ -1,5 +1,6 @@
 import { DataTypes, Sequelize } from "sequelize";
 import sequelize from "../config/db.js";
+import Post from "./Post.js";
 export default (sequelize, DataTypes) => {const Image = sequelize.define("Images", {
     id: {
       type: Sequelize.DataTypes.INTEGER,
@@ -16,6 +17,10 @@ export default (sequelize, DataTypes) => {const Image = sequelize.define("Images
       allowNull: false,
     },
     size: {
+      type: Sequelize.DataTypes.INTEGER,
+      allowNull: true,
+    },
+    postId: {
       type: Sequelize.DataTypes.INTEGER,
       allowNull: true,
     },

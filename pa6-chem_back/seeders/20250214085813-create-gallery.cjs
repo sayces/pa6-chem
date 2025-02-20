@@ -6,9 +6,8 @@ module.exports = {
     
       {
         id: 1,
-        author: 1,
+        authorId: 1,
         collectionName: "test collection",
-        posts: null,
         createdAt: new Date(),
         updatedAt: new Date(),
       }]);

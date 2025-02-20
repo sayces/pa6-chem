@@ -7,20 +7,15 @@ import sequelize from "../config/db.js";
       primaryKey: true,
       allowNull: false,
     },
-    author: {
-      type: Sequelize.DataTypes.STRING,
+    authorId: {
+      type: Sequelize.DataTypes.INTEGER,
       allowNull: false,
-    },
-    
-    images: {
-      type: Sequelize.DataTypes.STRING,
-      allowNull: true,
     },
     postName: {
       type: Sequelize.DataTypes.STRING,
       allowNull: true,
     },
-    collection:   {
+    collectionId:   {
       type: Sequelize.DataTypes.INTEGER,
       allowNull: true,
     },

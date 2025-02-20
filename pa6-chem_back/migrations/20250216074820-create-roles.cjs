@@ -7,10 +7,10 @@ module.exports = {
         type: Sequelize.INTEGER,
         primaryKey: true,
         allowNull: false,
-        autoIncrement: false,
-        references: { model: "Users", key: "roleId" }, // Внешний ключ
-        onUpdate: "CASCADE",
-        onDelete: "CASCADE"
+        autoIncrement: true,
+        // references: { model: "users", key: "roleId" }, // Внешний ключ
+        // onUpdate: "CASCADE",
+        // onDelete: "CASCADE"
       },
       roleName: {
         type: Sequelize.STRING,

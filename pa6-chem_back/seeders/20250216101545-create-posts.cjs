@@ -5,9 +5,9 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert("Posts", [{
       postName: "test post",
-      collection: 1,
-      author: 1,
-      images: null,
+      collectionId: 1,
+      authorId: 1,
+      // images: null,
       createdAt: new Date(),
       updatedAt: new Date(),
     }]);

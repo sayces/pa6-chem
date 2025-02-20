@@ -21,7 +21,7 @@ module.exports = {
       roleId: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        references: { model: "roles", key: "roleId" }, // Внешний ключ
+        references: { model: "Roles", key: "id" }, // Внешний ключ
         onUpdate: "CASCADE",
         onDelete: "CASCADE"
         

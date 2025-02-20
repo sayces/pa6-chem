@@ -8,7 +8,6 @@ export default (sequelize, DataTypes) => {
       id: {
         type: Sequelize.DataTypes.INTEGER,
         primaryKey: true,
-        allowNull: false,
         autoIncrement: true,
       },
       roleName: {

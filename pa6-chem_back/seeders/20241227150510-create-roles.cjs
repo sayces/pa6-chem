@@ -4,15 +4,15 @@ module.exports = {
     // Добавление данных
     await queryInterface.bulkInsert("Roles", [
       {
-        id: 0,
+        id: 1,
         roleName: "admin",
       },
       {
-        id: 1,
+        id: 2,
         roleName: "master",
       },
       {
-        id: 2,
+        id: 3,
         roleName: "user",
       },
     ]);

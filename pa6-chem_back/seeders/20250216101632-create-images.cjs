@@ -9,6 +9,7 @@ module.exports = {
         url: "test img url",
         size: 0,
         mimeType: "jpg",
+        postId: 1,
         imageName: "test img name",
         createdAt: new Date(),
         updatedAt: new Date(),

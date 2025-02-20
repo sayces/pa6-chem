@@ -15,16 +15,10 @@ export default (sequelize, DataTypes) => { const Gallery = sequelize.define(
         allowNull: false,
         unique: false,
       },
-      author: {
+      authorId: {
         type: Sequelize.DataTypes.INTEGER,
         allowNull: true,
       },
-      posts: {
-        type: Sequelize.DataTypes.STRING,
-        allowNull: true,
-        unique: false,
-      },
-      
       createdAt: {
         type: Sequelize.DataTypes.DATE,
         allowNull: false,

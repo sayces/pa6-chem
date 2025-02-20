@@ -28,6 +28,9 @@ export default (sequelize, DataTypes) => {
       roleId: {
         type: Sequelize.DataTypes.INTEGER,
         allowNull: false,
+        references: { model: "Roles", key: "id" }, // Внешний ключ
+        onUpdate: "CASCADE",  
+        onDelete: "CASCADE"
       },
       createdAt: {
         type: Sequelize.DataTypes.DATE,

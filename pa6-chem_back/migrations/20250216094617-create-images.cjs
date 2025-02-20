@@ -9,6 +9,9 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
         allowNull: false,
+        // references: { model: "postsimages", key: "imageId" }, // Внешний ключ
+        // onUpdate: "CASCADE",
+        // onDelete: "CASCADE"
       },
       filename: {
         type: Sequelize.DataTypes.STRING,
@@ -17,6 +20,13 @@ module.exports = {
       url: {
         type: Sequelize.DataTypes.STRING,
         allowNull: false,
+      },
+      postId: {
+        type: Sequelize.DataTypes.INTEGER,
+        allowNull: false,
+        // references: { model: "posts", key: "id" }, // Внешний ключ
+        // onUpdate: "CASCADE",
+        // onDelete: "CASCADE"
       },
       size: {
         type: Sequelize.DataTypes.INTEGER,
