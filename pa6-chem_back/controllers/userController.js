@@ -23,13 +23,13 @@ export const getAllUsers = async (req, res) => {
 
 export const createUser = async (req, res) => {
   try {
-    const { username, password } = req.body;
+    const { username, password, roleId } = req.body;
 
     if (!username || !password)
       throw new Error("Username and password are required");
 
     const hashedPassword = await bcrypt.hash(password, 10);
-    const user = await User.create({ username, password: hashedPassword });
+    const user = await User.create({ username, password: hashedPassword, roleId });
     res.status(201).json(user);
   } catch (error) {
     if (!res.headersSent) res.status(500).json({ error: error.message });

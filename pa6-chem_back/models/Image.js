@@ -1,7 +1,9 @@
 import { DataTypes, Sequelize } from "sequelize";
 import sequelize from "../config/db.js";
 import Post from "./Post.js";
-export default (sequelize, DataTypes) => {const Image = sequelize.define("Images", {
+
+export default (sequelize, DataTypes) => {
+  const Image = sequelize.define("Images", {
     id: {
       type: Sequelize.DataTypes.INTEGER,
       autoIncrement: true,
@@ -23,6 +25,9 @@ export default (sequelize, DataTypes) => {const Image = sequelize.define("Images
     postId: {
       type: Sequelize.DataTypes.INTEGER,
       allowNull: true,
+      // references: { model: Post, key: "id" }, // Внешний ключ
+      // onUpdate: "CASCADE",
+      // onDelete: "CASCADE",
     },
     mimeType: {
       type: Sequelize.DataTypes.STRING,
@@ -41,6 +46,5 @@ export default (sequelize, DataTypes) => {const Image = sequelize.define("Images
       allowNull: false,
     },
   });
-  return Image
-  ;}
-
+  return Image;
+};

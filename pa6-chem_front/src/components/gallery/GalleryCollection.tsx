@@ -1,43 +1,63 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import page_styles from "../pages/pages_styles/pages_styles.module.scss";
 import gallery_styles from "./_gallery.module.scss";
 import ImageUpload from "../imageUpload/ImageUpload";
-import { deleteImage } from "../../../api/apiGallery";
+import {
+  deleteImage,
+  getAllImages,
+  getAllPosts,
+} from "../../../api/apiGallery";
 import { useAuthStore } from "../../store/authStore";
 import { useNavigate } from "react-router-dom";
 import Post from "./posts/Post";
+import Image from "../../images/Image";
 
 export default function GalleryCollection() {
-  const [images, setImages] = useState([]);
-  const [posts, setPosts] = useState([]);
+  const [_images, _setImages] = useState([]);
+  const [_posts, _setPosts] = useState([]);
   const user = useAuthStore((state) => state.user);
 
   const navigate = useNavigate();
 
-  useEffect(() => {
-    getAllPosts();
-    getAllImages();
-
-    console.log(posts, images);
+  const fetchAllPosts = useCallback(async () => {
+    await getAllPosts()
+      .then((data) => {
+        console.log("Полученные посты:", data);
+        if (data) {
+          _setPosts(data);
+        }
+      })
+      .catch((error) =>
+        console.error("Ошибка загрузки постов:", error.message)
+      );
   }, []);
 
-  const getAllPosts = () => {
-    fetch("http://localhost:5002/api/gallery/posts")
-      .then((response) => response.json())
-      .then((data) => setPosts(data))
-      .catch((err) => console.error("Ошибка загрузки постов:", err));
-  };
+  const fetchAllImages = useCallback(async () => {
+    await getAllImages()
+      .then((data: any) => {
+        console.log("Полученные фото:", data);
+        if (data) {
+          _setImages(data);
+        }
+      })
+      .catch((error) =>
+        console.error("Ошибка загрузки галереи:", error.message)
+      );
+  }, []);
 
-  const getAllImages = () => {
-    fetch("http://localhost:5002/api/gallery/images")
-      .then((response) => response.json())
-      .then((data) => setImages(data))
-      .catch((err) => console.error("Ошибка загрузки галереи:", err));
-  };
+  useEffect(() => {
+    fetchAllPosts();
+    fetchAllImages();
+  }, [fetchAllPosts, fetchAllImages]);
+
+  // const getImagesForPost = (postId: number) => {
+  //   return _images.filter((image: any) => image.postId === postId);
+  // };
 
   const handleDeleteImage = async (id: number) => {
     try {
       await deleteImage(id);
+      _setImages(_images.filter((image: any) => image.id !== id));
     } catch (error) {
       console.error("Ошибка удаления изображения:", error);
     }
@@ -49,6 +69,13 @@ export default function GalleryCollection() {
     navigate("/gallery");
   };
 
+  // _posts.forEach((post: any) => {
+  //   const postImages = post.images.filter(
+  //     (image: any) => image.postId === post.id
+  //   );
+  //   console.log(postImages);
+  // });
+
   return (
     <div className={gallery_styles.gallery_page}>
       <a className={page_styles.link} onClick={galleryRedirect}>
@@ -57,38 +84,30 @@ export default function GalleryCollection() {
 
       <div className={gallery_styles.gallery_container}>
         <ImageUpload />
-        {posts &&
-          posts.map((post: any) => (
-            <Post key={post.id}>
-              {images[0] &&
-                images.reverse().map((image: any) => (
-                  <div
-                    tabIndex={image.id}
-                    key={image.id}
-                    className={gallery_styles.image_container}
-                  >
-                    <img
-                      src={`http://localhost:5002${image.url}`}
-                      alt={image.url}
-                      className={gallery_styles.image}
-                    />
-                    <div className={gallery_styles.image_overlay}>
-                      <button className={gallery_styles.image_like}>
-                        <p>like</p>
-                      </button>
 
-                      <button
-                        disabled={!user}
-                        onClick={() => handleDeleteImage(image.id)}
-                        className={gallery_styles.image_delete}
-                      >
-                        <p>rm</p>
-                      </button>
-                    </div>
-                  </div>
-                ))}
-            </Post>
-          ))}
+        {_posts.length > 0 ? (
+          _posts
+            .slice()
+            .reverse()
+            .map((post: any) => {
+              // const postImages = getImagesForPost(post.id); // Получаем изображения для поста
+
+              return (
+                <Post key={post.id} post={post}> 
+                  
+                  {_images.length > 0 ? (
+                    _images.map((image: any) => (
+                      <Image key={image.id} onClick={() => handleDeleteImage(image.id)} image={image}/>
+                    ))
+                  ) : (
+                    <p>Нет изображений</p>
+                  )}
+                </Post>
+              );
+            })
+        ) : (
+          <p>Посты не найдены</p>
+        )}
       </div>
     </div>
   );

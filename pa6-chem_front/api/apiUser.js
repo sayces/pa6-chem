@@ -21,7 +21,7 @@ export async function createUser(username, password) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify({ username, password, roleId: 2 }),
     });
     return response.json();
   } catch (error) {

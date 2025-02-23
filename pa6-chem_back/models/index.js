@@ -6,12 +6,12 @@ import Post from "./Post.js";
 import Image from "./Image.js";
 import './associations.js'
 import { Sequelize } from "sequelize";
-import PostsImages from "./PostsImages.js";
+import PostImages from "./PostImages.js";
 
 
 
 const models = {
-  // PostsImages: PostsImages(sequelize),
+  PostImages: PostImages(sequelize),
   User: User(sequelize),
   Gallery: Gallery(sequelize),
   Role: Role(sequelize),
@@ -19,20 +19,24 @@ const models = {
   Post: Post(sequelize),
 };
 
-models.Role.hasMany(models.User, { foreignKey: "roleId", as: "Users", onDelete: "CASCADE", onUpdate: "CASCADE" });
-models.User.belongsTo(models.Role, { foreignKey: "id", as: "Roles" });
+models.Role.hasMany(models.User, { foreignKey: "roleId", as: "Users", onDelete: "CASCADE", onUpdate: "CASCADE"});
+models.User.belongsTo(models.Role, { foreignKey: "roleId", as: "Role", onDelete: "CASCADE", onUpdate: "CASCADE"  });
 
-models.Image.belongsTo(models.Post, { foreignKey: "postId", as: "Posts", onDelete: "CASCADE", onUpdate: "CASCADE" });
-models.Post.hasMany(models.Image, { foreignKey: "id", as: "Images" });
+// models.Post.hasMany(models.Image, { foreignKey: "postId", as: "Images", onDelete: "CASCADE", onUpdate: "CASCADE" });
+// models.Image.belongsTo(models.Post, { foreignKey: "postId", as: "Post", onDelete: "CASCADE", onUpdate: "CASCADE" });
+
 
 models.Gallery.hasMany(models.Post, { foreignKey: "collectionId", as: "Posts", onDelete: "CASCADE", onUpdate: "CASCADE" });
-models.Post.belongsTo(models.Gallery, { foreignKey: "id", as: "Gallery" });
+models.Post.belongsTo(models.Gallery, { foreignKey: "collectionId", as: "Gallery", onDelete: "CASCADE", onUpdate: "CASCADE" });
 
-models.Gallery.belongsTo(models.User, { foreignKey: "id", as: "Users", onDelete: "CASCADE", onUpdate: "CASCADE" });
-models.User.hasMany(models.Gallery, { foreignKey: "authorId", as: "Gallery" });
+models.User.hasMany(models.Gallery, { foreignKey: "authorId", as: "Gallery", onDelete: "CASCADE", onUpdate: "CASCADE" });
+models.Gallery.belongsTo(models.User, { foreignKey: "authorId", as: "User", onDelete: "CASCADE", onUpdate: "CASCADE" });
 
 models.User.hasMany(models.Post, { foreignKey: "authorId", as: "Posts", onDelete: "CASCADE", onUpdate: "CASCADE" });
-models.Post.belongsTo(models.User, { foreignKey: "id", as: "Users" });
+models.Post.belongsTo(models.User, { foreignKey: "authorId", as: "User", onDelete: "CASCADE", onUpdate: "CASCADE" });
+
+models.Post.belongsToMany(models.Image, { through: models.PostImages, foreignKey: "postId", as: "images", onDelete: "CASCADE", onUpdate: "CASCADE" });
+models.Image.belongsToMany(models.Post, { through: models.PostImages, foreignKey: "imageId", as: "posts", onDelete: "CASCADE", onUpdate: "CASCADE" });
 
 export {sequelize};
 

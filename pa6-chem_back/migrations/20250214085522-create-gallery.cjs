@@ -18,16 +18,13 @@ module.exports = {
           allowNull: false,
           unique: false,
         },
-        author: {
+        authorId: {
           type: Sequelize.DataTypes.INTEGER,
           allowNull: true,
+          // references: { model: "Users", key: "authorId" }, // Внешний ключ
+          // onUpdate: "CASCADE",
+          // onDelete: "CASCADE"
         },
-        posts: {
-          type: Sequelize.DataTypes.STRING,
-          allowNull: true,
-          unique: false,
-        },
-
         createdAt: {
           type: Sequelize.DataTypes.DATE,
           allowNull: false,

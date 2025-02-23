@@ -24,7 +24,7 @@ module.exports = {
       postId: {
         type: Sequelize.DataTypes.INTEGER,
         allowNull: false,
-        // references: { model: "posts", key: "id" }, // Внешний ключ
+        // references: { model: "Posts", key: "id" }, // Внешний ключ
         // onUpdate: "CASCADE",
         // onDelete: "CASCADE"
       },

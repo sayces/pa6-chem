@@ -1,10 +1,14 @@
-import React from 'react'
-import gallery_styles from '../_gallery.module.scss'
+import React, { useEffect } from "react";
+import gallery_styles from "../_gallery.module.scss";
 
-export default function Post(key: any, {children}: any) {
+const Post = (
+  { children, post }: { children: React.ReactNode, post: any },
+) => {
   return (
-    <div className={gallery_styles.post} key={key}>
+    <fieldset className={gallery_styles.post}>
+      <legend className={gallery_styles.post_name}>{post.postName}</legend>
       {children}
-    </div>
-  )
-}
+    </fieldset>
+  );
+};
+export default Post;

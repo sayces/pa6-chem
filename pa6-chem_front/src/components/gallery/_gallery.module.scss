@@ -9,7 +9,7 @@
   flex-direction: column;
   margin: 2rem;
   height: 1rem;
-  opacity: 0;
+  opacity: 0%;
   transition: all 0.2s ease-in-out;
 }
 
@@ -19,6 +19,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0rem;
   margin: auto;
   height: 100%;
   width: 30rem;
@@ -27,6 +28,11 @@
   padding: 2rem 4rem;
   transition: all 0.2s ease-in-out;
 
+  &:hover {
+    padding: 4rem;
+    
+  }
+
   &:hover .image_upload {
     position: relative;
     background: #94434300;
@@ -34,12 +40,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 2rem; 
+    margin: 2rem;
     height: 6rem;
-    opacity: 1;
+
+    opacity: 100%;
     transition: all 0.2s ease-in-out;
   }
-   
 }
 
 .gallery_container {
@@ -64,14 +70,24 @@
   align-items: center;
   max-height: auto;
   max-width: auto;
-  height: auto;
+  height: 100%;
   width: 28rem;
   border-radius: 10px;
-  // border: 2px solid  #a6c55ebe;
+  border: 0 solid  #a6c55ebe;
   padding: 1rem;
   transition: all 0.2s ease-in-out;
-  filter: drop-shadow(0 0 1px #a6c55ebe);
+  // filter: drop-shadow(0 0 1px #a6c55ebe);
   box-shadow: inset 0 0 6px #a6c55ebe;
+  // box-shadow: 0 0 2px #a6c55ebe;
+  transition: all 0.2s ease-in-out;
+
+  .post_name {
+    padding: 1rem;
+    font-size: 1.4rem;
+    text-align: start;
+    background-color: #fff;
+    color: #5a6b33;
+  }
 }
 
 .image_container {
@@ -86,30 +102,29 @@
   align-items: center;
   position: relative;
   object-fit: cover;
+  transform: translate(0%, 0%);
   transition: all 0.2s ease-in-out;
   z-index: 1;
-  
 
   &:focus {
+    box-shadow: 0 0 6px #000000be;
     position: fixed;
     height: auto;
-    width: 100%;
+    width: 50%;
     top: 50%;
     left: 50%;
     transition: all 0.2s ease-in-out;
     transform: translate(-50%, -50%);
     z-index: 2;
     border-radius: 10px;
-    filter: drop-shadow(0 0 6px #000000);
-    
-    
+    // filter: drop-shadow(0 0 6px #000000);
   }
 
   .image {
     position: relative;
     height: 100%;
     width: 100%;
-    object-fit: fill;
+    object-fit: contain;
     transition: all 0.2s ease-in-out;
     margin: auto;
     z-index: 3;
@@ -119,12 +134,12 @@
 
 .image_overlay {
   position: absolute;
-  bottom: 0.4rem;
-  right: 0.4rem;
+  bottom: 1rem;
+  right: 1rem;
   display: flex;
   flex-direction: column;
   padding: 0.1rem;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(4px);
   border-radius: 20px;
   z-index: 3;
   transition: all 0.2s ease-in-out;
@@ -136,27 +151,32 @@
     border: 2px dashed #3b0c0c;
     color: #000000;
     margin: 0.2rem;
-    border-radius: 10px;
+    border-radius: 20px;
     transition: all 0.2s ease-in-out;
-  
+
     &:hover {
-      color: #751d1d;
+      border: 0px dashed #3b0c0c;
+      color: #a00000;
       background-color: transparent;
+      transition: all 0.1s ease-in-out;
     }
   }
-  
+
   .image_delete {
     margin: 0.2rem;
     position: relative;
     background: transparent;
     border: 2px dashed #222222;
     color: #000000;
-  
-    border-radius: 10px;
+
+    border-radius: 20px;
     transition: all 0.2s ease-in-out;
-  
+
     &:hover {
+      border: 0px dashed #3b0c0c;
       color: #a00000;
+      background-color: transparent;
+      transition: all 0.1s ease-in-out;
     }
     &:disabled {
       opacity: 0.4;
@@ -187,6 +207,4 @@
   padding: 1rem 2rem;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
-  
 }
-

@@ -3,24 +3,13 @@ import { useState } from "react";
 import gallery_styles from "../gallery/_gallery.module.scss";
 import { useAuthStore } from "../../store/authStore";
 import { redirect } from "react-router-dom";
-import { eventNames } from "process";
+import { uploadImage } from "../../../api/apiGallery";
 
-const ImageUpload: React.FC = () => {
+const ImageUpload =  ()  => {
   const user = useAuthStore((state) => state.user);
-  const [image, setImage] = useState<File | null>(null);
+  const [image, setImage] = useState<null | File>(null);
   const [message, setMessage] = useState("");
-  const [imageName, setImageName] = useState('');
-
-  
-
-  useEffect(() => {
-    // imageUploadSubmit();
-  }, []);
-
-  const imageUploadSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    redirect("/gallery");
-  };
+  const [imageName, setImageName] = useState("");
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
@@ -28,38 +17,26 @@ const ImageUpload: React.FC = () => {
     }
   };
 
-  const handleUpload = async () => {
+  const handleUpload = () => {
     if (!image) {
-      setMessage("Выберите файл");
+      return setMessage("Выберите файл");
     }
 
     const formData = new FormData();
-    formData.append("image", image);
-    formData.append('imageName', imageName);
-    formData.append('size', (image.size / 1024).toFixed(2));
-    
-    console.log('formdata', formData)
+    image && formData.append("image", image);
+    formData.append("imageName", imageName);
+    formData.append("size", (image.size / 1024).toFixed(2));
+    formData.append("postId", String(1));
 
-    try {
-      const response = await fetch("http://localhost:5002/api/gallery/upload", {
-        method: "POST",
-        body: formData,
-      });
-      
-      if (!response.ok) {
-        throw new Error("Ошибка загрузки файла");
-      }
-      await response.json();
+    console.log("formdata", formData);
 
-      setMessage("Изображение успешно загружено!");
-    } catch (error) {
-      console.error(error);
-      setMessage(`Ошибка загрузки.`);
-    }
-  };
+    uploadImage(formData);
+  }
 
   return (
-    <form id="Form" onSubmit={imageUploadSubmit} className={gallery_styles.image_upload}>
+    <div
+      className={gallery_styles.image_upload}
+    >
       <input
         className={gallery_styles.file_input}
         id="file_input"
@@ -67,7 +44,12 @@ const ImageUpload: React.FC = () => {
         accept="image/*"
         onChange={handleFileChange}
       />
-      <input type="text" className={gallery_styles.input_image_name} onChange={(e) => setImageName(e.target.value)} placeholder="imageName" />
+      <input
+        type="text"
+        className={gallery_styles.input_image_name}
+        onChange={(e) => setImageName(e.target.value)}
+        placeholder="imageName"
+      />
       <label
         htmlFor="file_input"
         className={gallery_styles.file_label}
@@ -81,9 +63,11 @@ const ImageUpload: React.FC = () => {
           {image ? "Отправьте файл" : "Загрузить изображение"}
         </p>
       </label>
-      <button type="submit" onClick={handleUpload}>Отправить</button>
+      <button type="submit" onClick={handleUpload}>
+        Отправить
+      </button>
       {message && <p>{message}</p>}
-    </form>
+    </div>
   );
 };
 

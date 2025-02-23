@@ -18,6 +18,9 @@ export default (sequelize, DataTypes) => { const Gallery = sequelize.define(
       authorId: {
         type: Sequelize.DataTypes.INTEGER,
         allowNull: true,
+        // references: { model: "Users", key: "authorId" }, // Внешний ключ
+        // onUpdate: "CASCADE",
+        // onDelete: "CASCADE"
       },
       createdAt: {
         type: Sequelize.DataTypes.DATE,

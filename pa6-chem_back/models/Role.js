@@ -9,6 +9,7 @@ export default (sequelize, DataTypes) => {
         type: Sequelize.DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
+        allowNull: false,
       },
       roleName: {
         type: Sequelize.DataTypes.STRING,

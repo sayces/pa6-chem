@@ -15,7 +15,9 @@
   &:focus,
   :active {
     outline: none;
+    transition: all 0.2s ease-in-out;
   }
+
 }
 
 #root {
@@ -46,7 +48,8 @@ html {
   flex-direction: column;
   background-color: rgb(221, 221, 221);
   border-radius: 1rem;
-  height: auto;
+  height: 100%;
+  transition: all 0.2s ease-in-out;
 }
 
 h1 {
