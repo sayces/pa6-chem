@@ -4,6 +4,7 @@ import gallery_styles from "./_gallery.module.scss";
 import ImageUpload from "../imageUpload/ImageUpload";
 import {
   deleteImage,
+  deletePost,
   getAllImages,
   getAllPosts,
 } from "../../../api/apiGallery";
@@ -13,8 +14,9 @@ import Post from "./posts/Post";
 import Image from "../../images/Image";
 
 export default function GalleryCollection() {
-  const [_images, _setImages] = useState([]);
-  const [_posts, _setPosts] = useState([]);
+  const [images, setImages] = useState([]);
+  const [posts, setPosts] = useState([]);
+  const [showBtn, setShowBtn] = useState(false)
   const user = useAuthStore((state) => state.user);
 
   const navigate = useNavigate();
@@ -24,7 +26,7 @@ export default function GalleryCollection() {
       .then((data) => {
         console.log("Полученные посты:", data);
         if (data) {
-          _setPosts(data);
+          setPosts(data);
         }
       })
       .catch((error) =>
@@ -37,7 +39,7 @@ export default function GalleryCollection() {
       .then((data: any) => {
         console.log("Полученные фото:", data);
         if (data) {
-          _setImages(data);
+          setImages(data);
         }
       })
       .catch((error) =>
@@ -50,14 +52,23 @@ export default function GalleryCollection() {
     fetchAllImages();
   }, [fetchAllPosts, fetchAllImages]);
 
-  // const getImagesForPost = (postId: number) => {
-  //   return _images.filter((image: any) => image.postId === postId);
-  // };
+  const getImagesForPost = (postId: number) => {
+    return images.filter((image: any) => image.postId === postId);
+  };
+
+  const handleRemovePost = async (id: any) => {
+    try {
+      await deletePost(id);
+      setPosts(posts.filter((post: any) => post.id !== id));
+    } catch (err) {
+      console.log("Ошибка удаления поста", err);
+    }
+  };
 
   const handleDeleteImage = async (id: number) => {
     try {
       await deleteImage(id);
-      _setImages(_images.filter((image: any) => image.id !== id));
+      setImages(images.filter((image: any) => image.id !== id));
     } catch (error) {
       console.error("Ошибка удаления изображения:", error);
     }
@@ -69,12 +80,9 @@ export default function GalleryCollection() {
     navigate("/gallery");
   };
 
-  // _posts.forEach((post: any) => {
-  //   const postImages = post.images.filter(
-  //     (image: any) => image.postId === post.id
-  //   );
-  //   console.log(postImages);
-  // });
+  const handleOnEdit = async () => {
+    setShowBtn(!showBtn)
+  };
 
   return (
     <div className={gallery_styles.gallery_page}>
@@ -83,21 +91,32 @@ export default function GalleryCollection() {
       </a>
 
       <div className={gallery_styles.gallery_container}>
-        <ImageUpload />
+        <ImageUpload posts={posts} />
 
-        {_posts.length > 0 ? (
-          _posts
+        {posts.length > 0 ? (
+          posts
             .slice()
             .reverse()
             .map((post: any) => {
-              // const postImages = getImagesForPost(post.id); // Получаем изображения для поста
+              const postImages = getImagesForPost(post.id); // Получаем изображения для поста
 
               return (
-                <Post key={post.id} post={post}> 
-                  
-                  {_images.length > 0 ? (
-                    _images.map((image: any) => (
-                      <Image key={image.id} onClick={() => handleDeleteImage(image.id)} image={image}/>
+                <Post
+                  key={post.id}
+                  post={post}
+                  onDelete={() => handleRemovePost(post.id)}
+                  onEdit={() => {
+                    handleOnEdit();
+                  }}
+                >
+                  {images.length > 0 ? (
+                    postImages.map((image: any) => (
+                      <Image
+                        key={image.id}
+                        onDelete={() => handleDeleteImage(image.id)}
+                        image={image}
+                        showBtn={showBtn}
+                      />
                     ))
                   ) : (
                     <p>Нет изображений</p>

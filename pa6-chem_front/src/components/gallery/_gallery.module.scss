@@ -8,9 +8,34 @@
   align-items: center;
   flex-direction: column;
   margin: 2rem;
-  height: 1rem;
+  height: auto;
   opacity: 0%;
   transition: all 0.2s ease-in-out;
+  border: none;
+  border-radius: 10px;
+
+  .input_image_name {
+    position: relative;
+    background: transparent;
+    margin: 1rem;
+    width: auto;
+  }
+
+  .input_post_name {
+    position: relative;
+    background: transparent;
+    margin: 1rem;
+    width: auto;
+  }
+
+  .image_upload_title {
+    padding: 1rem;
+    font-size: 1.4rem;
+    text-align: start;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.5);
+    // text-shadow: 0 0 3px rgb(0, 0, 0);
+  }
 }
 
 .gallery_page {
@@ -30,7 +55,6 @@
 
   &:hover {
     padding: 4rem;
-    
   }
 
   &:hover .image_upload {
@@ -41,10 +65,12 @@
     align-items: center;
     flex-direction: column;
     margin: 2rem;
-    height: 6rem;
-
+    padding: 2rem;
+    height: auto;
+    width: 28rem;
     opacity: 100%;
     transition: all 0.2s ease-in-out;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -70,10 +96,10 @@
   align-items: center;
   max-height: auto;
   max-width: auto;
-  height: 100%;
+  height: auto;
   width: 28rem;
   border-radius: 10px;
-  border: 0 solid  #a6c55ebe;
+  border: 0 solid #a6c55ebe;
   padding: 1rem;
   transition: all 0.2s ease-in-out;
   // filter: drop-shadow(0 0 1px #a6c55ebe);
@@ -88,10 +114,65 @@
     background-color: #fff;
     color: #5a6b33;
   }
+
+  .post_overlay_edit {
+    position: absolute;
+    bottom: 0rem;
+    right: 0rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0.1rem;
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    z-index: 3;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+
+    .post_edit {
+      margin: 0;
+      position: relative;
+      background: transparent;
+      color: #000000;
+      border-radius: 10px;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  &:hover .post_overlay_edit {
+    position: absolute;
+    bottom: 0rem;
+    right: 0rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0.1rem;
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    z-index: 3;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  
+    .post_edit {
+      margin: 0;
+      position: relative;
+      background: transparent;
+      color: #4b4a14;
+      border-radius: 10px;
+      transition: all 0.2s ease-in-out;
+  
+      &:hover {
+        color: #a00000;
+        background-color: transparent;
+        transition: all 0.1s ease-in-out;
+      }
+      &:disabled {
+        opacity: 0.4;
+      }
+    }
+  }
 }
 
 .image_container {
-  width: 100%;
+  width: auto;
   height: 100%;
   margin: 0;
   padding: 0.4rem;
@@ -101,20 +182,26 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  object-fit: cover;
+  object-fit: none;
   transform: translate(0%, 0%);
   transition: all 0.2s ease-in-out;
   z-index: 1;
+  border-radius: 10px;
 
   &:focus {
     box-shadow: 0 0 6px #000000be;
     position: fixed;
     height: auto;
-    width: 50%;
-    top: 50%;
-    left: 50%;
-    transition: all 0.2s ease-in-out;
-    transform: translate(-50%, -50%);
+    width: auto;
+    margin: auto;
+    // top: 50%;
+    background-color: #00000080;
+    // left: 50%;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+    // transition: all 0.2s ease-in-out;
+    // transform: translate(-50%, -50%);
     z-index: 2;
     border-radius: 10px;
     // filter: drop-shadow(0 0 6px #000000);
@@ -125,6 +212,7 @@
     height: 100%;
     width: 100%;
     object-fit: contain;
+    // padding: 20rem;
     transition: all 0.2s ease-in-out;
     margin: auto;
     z-index: 3;
@@ -140,7 +228,7 @@
   flex-direction: column;
   padding: 0.1rem;
   backdrop-filter: blur(4px);
-  border-radius: 20px;
+  border-radius: 10px;
   z-index: 3;
   transition: all 0.2s ease-in-out;
   object-fit: cover;
@@ -151,7 +239,7 @@
     border: 2px dashed #3b0c0c;
     color: #000000;
     margin: 0.2rem;
-    border-radius: 20px;
+    border-radius: 10px;
     transition: all 0.2s ease-in-out;
 
     &:hover {
@@ -169,7 +257,7 @@
     border: 2px dashed #222222;
     color: #000000;
 
-    border-radius: 20px;
+    border-radius: 10px;
     transition: all 0.2s ease-in-out;
 
     &:hover {
@@ -183,6 +271,8 @@
     }
   }
 }
+
+
 
 .file_input {
   background-color: #000;
