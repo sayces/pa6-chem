@@ -1,0 +1,19 @@
+.loader {
+  position: fixed;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: top 0.3s ease-out;
+  z-index: 1000;
+  // height: 10rem;
+  // width: 10rem;
+
+  .show_loader {
+    top: 20px;
+  }
+}

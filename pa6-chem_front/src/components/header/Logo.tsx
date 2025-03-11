@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../_header.module.scss'
+import styles from './_header.module.scss'
 import { useNavigate } from "react-router-dom";
 
 export default function Logo() {

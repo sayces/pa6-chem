@@ -1,13 +1,10 @@
-import React from 'react';
-import styles from './_links.module.scss';
+import React from "react";
+import link_styles from "./_links.module.scss";
+import { Link } from "react-router";
 
 
-
-export default function LinkLabel({size, link, onClick}: any) {
-
-  if (size === 'small') {
-    return <a className={styles.smallLink} onClick={onClick} href={link.src}>{ link.content }</a>
-  } else {
-    return <a className={styles.link} onClick={onClick} href={link.src}>{ link.content }</a>
-  }
+export default function LinkLabel({ children, onClick}: { children: React.ReactNode, onClick?: () => void | undefined  } ) {
+  
+  
+  return <a onClick={onClick} className={link_styles.link}>{children}</a>;
 }

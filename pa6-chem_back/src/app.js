@@ -2,6 +2,7 @@ import sequelize from "../config/db.js";
 import express from "express";
 import userRoutes from "../routes/userRoutes.js";
 import galleryRoutes from "../routes/galleryRoutes.js";
+import serviceRoutes from "../routes/serviceRoutes.js";
 import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -15,6 +16,7 @@ app.use(cors());
 app.use(express.json());
 app.use("/api", userRoutes);
 app.use("/api", galleryRoutes);
+app.use("/api", serviceRoutes)
 
 app.use("/uploads", express.static("uploads"));
 

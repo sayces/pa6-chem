@@ -14,6 +14,21 @@ export async function getUsers() {
   }
 }
 
+
+export async function getUserById(id) {
+  try {    
+    const response = await fetch(`${API_URL}/users/${id}`, {
+      method: "GET",
+    });
+    console.log('posts-user response',response);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+}
+
 export async function createUser(username, password) {
   try {
     const response = await fetch(`${API_URL}/register`, {

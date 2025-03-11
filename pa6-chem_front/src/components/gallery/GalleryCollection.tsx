@@ -1,36 +1,39 @@
 import React, { useCallback, useEffect, useState } from "react";
-import page_styles from "../pages/pages_styles/pages_styles.module.scss";
+import page_styles from "../pages/_pages_styles.module.scss";
 import gallery_styles from "./_gallery.module.scss";
-import ImageUpload from "../imageUpload/ImageUpload";
+import link_styles from "../links/_links.module.scss";
 import {
+  createPost,
   deleteImage,
   deletePost,
   getAllImages,
   getAllPosts,
+  getPostsWithAuthor,
 } from "../../../api/apiGallery";
 import { useAuthStore } from "../../store/authStore";
 import { useNavigate } from "react-router-dom";
 import Post from "./posts/Post";
 import Image from "../../images/Image";
+import GalleryMainLink from "./GalleryMainLink";
+
+import FilesInputComponent from "../input/FilesInputComponent";
 
 export default function GalleryCollection() {
   const [images, setImages] = useState([]);
   const [posts, setPosts] = useState([]);
-  const [showBtn, setShowBtn] = useState(false)
-  const user = useAuthStore((state) => state.user);
+  const [showBtn, setShowBtn] = useState(false);
+  const [postsWithAuthor, setPostsWithAuthor] = useState([]);
 
   const navigate = useNavigate();
 
-  const fetchAllPosts = useCallback(async () => {
-    await getAllPosts()
+  const fetchPostsWithAuthor = useCallback(async () => {
+    await getPostsWithAuthor()
       .then((data) => {
         console.log("Полученные посты:", data);
-        if (data) {
-          setPosts(data);
-        }
+        if (data) setPostsWithAuthor(data);
       })
       .catch((error) =>
-        console.error("Ошибка загрузки постов:", error.message)
+        console.error("Ошибка загрузки постов 2:", error.message)
       );
   }, []);
 
@@ -48,9 +51,12 @@ export default function GalleryCollection() {
   }, []);
 
   useEffect(() => {
-    fetchAllPosts();
+    // fetchAllPosts();
     fetchAllImages();
-  }, [fetchAllPosts, fetchAllImages]);
+    fetchPostsWithAuthor();
+  }, []);
+
+  console.log("postsWithAuthor:", postsWithAuthor);
 
   const getImagesForPost = (postId: number) => {
     return images.filter((image: any) => image.postId === postId);
@@ -75,26 +81,30 @@ export default function GalleryCollection() {
     getAllImages();
   };
 
-  const galleryRedirect = (e: any) => {
-    e.preventDefault();
-    navigate("/gallery");
+  const handleOnEdit = async () => {
+    setShowBtn(!showBtn);
   };
 
-  const handleOnEdit = async () => {
-    setShowBtn(!showBtn)
-  };
+  const handleOnAdd = async () => {};
 
   return (
     <div className={gallery_styles.gallery_page}>
-      <a className={page_styles.link} onClick={galleryRedirect}>
-        <h1>Коллекция галереи</h1>
-      </a>
+      <div className={gallery_styles.gallery_navigation}>
+        <GalleryMainLink />
 
+        <FilesInputComponent />
+
+        <div className={gallery_styles.search}>
+          <input
+            className={gallery_styles.search_input}
+            type="text"
+            placeholder="Поиск..."
+          ></input>
+        </div>
+      </div>
       <div className={gallery_styles.gallery_container}>
-        <ImageUpload posts={posts} />
-
-        {posts.length > 0 ? (
-          posts
+        {postsWithAuthor.length > 0 ? (
+          postsWithAuthor
             .slice()
             .reverse()
             .map((post: any) => {
@@ -105,9 +115,8 @@ export default function GalleryCollection() {
                   key={post.id}
                   post={post}
                   onDelete={() => handleRemovePost(post.id)}
-                  onEdit={() => {
-                    handleOnEdit();
-                  }}
+                  onEdit={handleOnEdit}
+                  onAdd={handleOnAdd}
                 >
                   {images.length > 0 ? (
                     postImages.map((image: any) => (

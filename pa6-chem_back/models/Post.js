@@ -10,20 +10,17 @@ import sequelize from "../config/db.js";
     authorId: {
       type: Sequelize.DataTypes.INTEGER,
       allowNull: false,
-      // references: { model: "User", as: "Users" },
-      // onUpdate: "CASCADE",
-      // onDelete: "CASCADE"
+      references: { model: "users", key: "id" },
+        onUpdate: "CASCADE",
+        onDelete: "CASCADE",
     },
-    postName: {
-      type: Sequelize.DataTypes.STRING,
+    postDescription: {
+      type: Sequelize.DataTypes.TEXT,
       allowNull: true,
     },
     collectionId:   {
       type: Sequelize.DataTypes.INTEGER,
       allowNull: true,
-      // references: { model: "Gallery" },
-      // onUpdate: "CASCADE",
-      // onDelete: "CASCADE"
     },
     
     createdAt: {

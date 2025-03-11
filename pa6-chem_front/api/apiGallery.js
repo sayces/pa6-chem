@@ -54,14 +54,14 @@ export async function getAllImages() {
 }
 
 
+
 export async function uploadImage(formData) {
   try {
     const response = await fetch(`${API_URL}/gallery/images/upload`, {
       method: "POST",
-      // headers: {
-      //   "Content-Type": "multipart/form-data",
-      // },
-      
+      headers: {
+        // "Content-Type": "multipart/form-data",
+      },
       body: formData,
     });
 
@@ -70,7 +70,9 @@ export async function uploadImage(formData) {
       throw new Error(`Ошибка загрузки: ${response.status} - ${errorText}`);
     }
     const data = await response.json();
+    
     console.log("Файл загружен:", data);
+    return data;
   } catch (error) {
     console.error( error.message);
   }
@@ -95,5 +97,33 @@ export async function createPost(postData) {
     return data;
   } catch (error) {
     console.error( error.message);
+  }
+}
+
+export async function getPostById(id) {
+  try {
+    const response = await fetch(`${API_URL}/gallery/posts-by-id/${id}`, {
+      method: "GET",
+    });
+    console.log('posts-user response',response);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+}
+
+export async function getPostsWithAuthor() {
+  try {
+    const response = await fetch(`${API_URL}/gallery/posts-author`, {
+      method: "GET",
+    });
+    console.log('posts-author response',response);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log(error);
+    return [];
   }
 }

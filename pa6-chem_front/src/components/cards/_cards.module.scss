@@ -1,0 +1,45 @@
+@import "../../sass/common.module.scss";
+
+.homepage_cards {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: auto;
+  height: auto;
+  transition: all 0.2s ease-in-out;
+
+  .card {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    min-width: 28rem;
+    width: 34rem;
+    background-color: $meta_color_gray_1;
+    border-radius: 1rem;
+    margin: 0;
+    top: 0;
+    padding: 4rem 2rem;
+
+    &:hover {
+      cursor: auto;
+      box-shadow: 0 1rem 2rem $meta_color_gray_2;
+      top: -2rem;
+    }
+
+    .card_title {
+      position: relative;
+      text-align: center;
+      padding: 0.5rem 1rem;
+      margin: 0;
+    }
+
+    .card_image {
+      transform: scale(70%);
+    }
+  }
+}

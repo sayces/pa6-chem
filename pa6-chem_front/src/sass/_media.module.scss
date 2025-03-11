@@ -1,0 +1,35 @@
+
+
+@media (max-width: 1920px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 10px; /* 1rem = 8px */
+  }
+  .main {
+    height: auto;
+  }
+  .page {
+    flex-flow: row wrap;
+    height: auto;
+    margin: 0;
+    align-items: center;
+    background-color: $meta_color_dark;
+
+    .gallery_page {
+      display: flex;
+      max-width: 28rem;
+      width: 24rem;
+      flex-flow: row wrap;
+      margin: 0 auto;
+      gap: 2rem;
+      border-radius: 10px;
+      padding: 0;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}

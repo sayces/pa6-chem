@@ -1,24 +1,50 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import HomePage from "./components/pages/HomePage";
+import HomePage from "./components/home/HomePage";
 import { useAuthStore } from "./store/authStore";
 import AuthForm from "./components/entry/AuthForm";
-import MainPage from "./components/pages/MainPage";
-import ProfilePage from "./components/pages/ProfilePage";
+import MainPage from "./components/main/MainPage";
+import ProfilePage from "./components/profile/ProfilePage";
 import GalleryCollection from "./components/gallery/GalleryCollection";
 import Services from "./components/services/Services";
-import ImageUpload from "./components/imageUpload/ImageUpload";
+import Calendar from "./components/calendar/Calendar";
+import Loader from "./components/loader/Loader";
+import Card from "./components/cards/Card";
+import HomePageCards from "./components/cards/HomePageCards";
 export default function AppRoutes() {
   const user = useAuthStore((state) => state.user);
 
   return (
     <Routes>
+      <Route path="/" element={<Loader />}>
+      <Route path="/calendar" element={
+        <MainPage>
+           <HomePage>
+            <Calendar />
+          </HomePage>
+        </MainPage>
+        }>
+        
+      </Route>
+      <Route path="/services" element={
+        <MainPage>
+           <HomePage>
+            <Services />
+          </HomePage>
+        </MainPage>
+        }>
+        
+      
+      </Route>
       <Route
         path="/"
         element={
           <MainPage>
             <HomePage>
-              <Services />
-              <GalleryCollection />
+              <HomePageCards>
+              <Card card={'services'}/>
+              <Card card={'gallery'}/>
+              <Card card={'calendar'}/>
+              </HomePageCards>
             </HomePage>
           </MainPage>
         }
@@ -39,9 +65,9 @@ export default function AppRoutes() {
         path="/gallery"
         element={
           <MainPage>
-            <HomePage>
+            
               <GalleryCollection />
-            </HomePage>
+            
           </MainPage>
         }
       />
@@ -50,7 +76,7 @@ export default function AppRoutes() {
         element={
           <MainPage>
             <HomePage>
-              <ImageUpload />
+              {/* <ImageUpload /> */}
             </HomePage>
           </MainPage>
         }
@@ -67,6 +93,7 @@ export default function AppRoutes() {
           )
         }
       />
+      </Route>
     </Routes>
   );
 }

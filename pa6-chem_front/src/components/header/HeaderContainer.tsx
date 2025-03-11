@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import headerStyles from "./_header.module.scss";
-import Logo from "./header-items/Logo";
+import header_styles from "./_header.module.scss";
+import Logo from "./Logo";
 import SmallButton from "../button/SmallButton";
 import { useNavigate } from "react-router-dom";
 import { useAuthStore } from "../../store/authStore";
@@ -22,17 +22,17 @@ export default function HeaderContainer() {
   };
 
   return (
-    <header className={headerStyles.header_container}>
-      <div className={headerStyles.header_box}>
-        <section className={headerStyles.logo_section}>
+    <header className={header_styles.header_container}>
+      <div className={header_styles.header_box}>
+        <section className={header_styles.logo_section}>
           <Logo />
           {user && (
-            <div className={headerStyles.username_box}>
-              <p className={headerStyles.username}>
+            <div className={header_styles.username_box}>
+              <p className={header_styles.username}>
                 {user ? user.username : ""}
               </p>
               <a
-                className={headerStyles.profile_link}
+                className={header_styles.profile_link}
                 onClick={handleProfileButton}
               >
                 профиль
@@ -41,12 +41,10 @@ export default function HeaderContainer() {
           )}
         </section>
 
-        <section className={headerStyles.buttonSection}>
+        <section className={header_styles.buttonSection}>
           <SmallButton onClick={handleLoginLogoutButton}>
             {!user ? "вход" : "выход"}
           </SmallButton>
-          <SmallButton />
-          <SmallButton />
         </section>
       </div>
     </header>

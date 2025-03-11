@@ -1,5 +1,5 @@
 import models from "../models/index.js";
-const { User, Role } = models;
+const { User, Role, Post } = models;
 import db from "../models/index.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
@@ -20,6 +20,18 @@ export const getAllUsers = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+export const getUserById = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const user = await User.findByPk(id, {
+      include: 'posts',
+    });
+    res.status(200).json(user);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+}
 
 export const createUser = async (req, res) => {
   try {

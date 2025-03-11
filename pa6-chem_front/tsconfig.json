@@ -3,7 +3,7 @@
     "outDir": "./build/",
     "noImplicitAny": true,
     "module": "ESNext",
-    "target": "es6",
+    "target": "ESNext",
     "jsx": "react",
     "allowJs": true,
     "moduleResolution": "node",

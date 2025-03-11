@@ -16,7 +16,7 @@ export default function InputComponent({
   return (
     <input
       type={type}
-      className={inputStyles.inputField}
+      className={inputStyles.input_field}
       placeholder={inputProps.placeholder}
       value={value}
       onChange={onChange}

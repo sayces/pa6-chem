@@ -10,22 +10,21 @@ module.exports = {
         primaryKey: true,
         allowNull: false,
       },
-      postName: {
-        type: Sequelize.DataTypes.STRING,
-        allowNull: false,
-      },
       authorId: {
-        type: Sequelize.DataTypes.STRING,
+        type: Sequelize.DataTypes.INTEGER,
         allowNull: false,
+        references: { model: "Users", key: "id" },
+        onUpdate: "CASCADE",
+        onDelete: "CASCADE",
       },
       collectionId: {
         type: Sequelize.DataTypes.INTEGER,
         allowNull: true,
       },
-      // images: {
-      //   type: Sequelize.DataTypes.STRING,
-      //   allowNull: true,
-      // },
+      postDescription: {
+        type: Sequelize.DataTypes.TEXT,
+        allowNull: true,
+      },
       createdAt: {
         type: Sequelize.DataTypes.DATE,
         allowNull: false,

@@ -5,7 +5,9 @@ import {
   deleteUser,
   loginUser,
   getRoles,
+  getUserById,
 } from "../controllers/userController.js";
+import { get } from "http";
 
 const router = express.Router();
 
@@ -14,4 +16,5 @@ router.post("/register", createUser); // Создать нового польз�
 router.delete("/users/remove/:id", deleteUser); // Удалить пользователя по ID
 router.post("/login", loginUser); // Авторизация пользователя
 router.get("/roles", getRoles); // Получить роли пользователей
+router.get("/users/:id", getUserById);
 export default router;

@@ -1,13 +1,13 @@
+@use "../../sass/common.module.scss" as *;
 
 input {
   min-width: 10rem;
   font-size: 1.7rem;
   border: none;
   width: auto;
-  
 }
 
-.inputContainer {
+.input_container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -15,40 +15,118 @@ input {
   transition: all 0.3s;
 }
 
-.inputField {
+.input_field {
   text-align: start;
   font-size: 1.3rem;
   padding: 0.2rem 1rem;
   border-radius: 2rem;
   height: 2rem;
-  
+
   width: 50%;
   margin: 1rem;
   transition: all 0.3s ease-out;
   &:focus {
     width: 70%;
     transition: all 0.3s ease-out;
-    
   }
 }
 
+.image_upload_container {
+  background: #94434300;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+  padding: 0.2rem 1rem;
+  height: auto;
+  min-height: 2rem;
+  width: 28rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0 1rem $meta_color_gray_2;
+  border-radius: 10px;
+  border: none;
 
+  .image_upload_input_container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
 
+  .image_upload_input {
+    position: relative;
+    background: transparent;
+    width: auto;
+    display: none;
+  }
 
-._inputFieldAttr_yellow {
-  background: #000;
+  .image_upload_label {
+    position: relative;
+    background: $meta_color;
+    border-radius: 100%;
+    text-align: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    margin: 1rem
+  }
+
+  .image_upload_preview_container {
+    display: flex;
+    position: relative;
+    padding: 0 1rem;
+    background-color: $meta_color_gray_1;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    border-radius: 10px;
+    gap: 0.5rem;
+    width: auto;
+
+    .image_upload_preview {
+      position: relative;
+      background: transparent;
+
+      width: 2rem;
+      height: 2rem;
+      object-fit: cover;
+      border-radius: 10px;
+
+      &:hover {
+        width: auto;
+        height: 8rem;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+    }
+  }
 }
-._inputFieldAttr_red {
-  
+
+.image_upload_submit_button {
+  position: relative;
+  // background: transparent;
+  width: 2rem;
+  height: 2rem;
+  width: auto;
+  transition: all 0.2s ease-in-out;
 }
-._inputFieldAttr_green {
-  
-}
 
+.image_upload_post_description {
+  position: relative;
+  background: transparent;
+  padding: 0.2rem 1rem;
+  margin: 1rem 0;
+  width: auto;
+  transition: all 0.2s ease-in-out;
+  line-height: 1.5rem;
+  font-size: 1.5rem;
 
-
-@keyframes attributeAnimation {
-  0% {
-    
+  &::placeholder {
+    color: $meta_color_gray_3;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    font-style: italic;
   }
 }
